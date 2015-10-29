@@ -1,0 +1,720 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6605EA8A1BD7E557005A5016 /* PushReceiver.m in Sources */ = {isa = PBXBuildFile; fileRef = 6605EA891BD7E557005A5016 /* PushReceiver.m */; settings = {ASSET_TAGS = (); }; };
+		661104511B8751B600C8F1F4 /* UserIdentity.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 661104501B8751B600C8F1F4 /* UserIdentity.storyboard */; };
+		661104531B8751EB00C8F1F4 /* MobileAnalytics.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 661104521B8751EB00C8F1F4 /* MobileAnalytics.storyboard */; };
+		661104561B87524E00C8F1F4 /* MobileAnalyticsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 661104551B87524E00C8F1F4 /* MobileAnalyticsViewController.m */; };
+		661104591B87526700C8F1F4 /* UserIdentityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 661104581B87526700C8F1F4 /* UserIdentityViewController.m */; };
+		6611045C1B8756F500C8F1F4 /* DemoFeature.m in Sources */ = {isa = PBXBuildFile; fileRef = 6611045B1B8756F500C8F1F4 /* DemoFeature.m */; };
+		6699C6511BBAF90B00436B45 /* UserSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6699C6501BBAF90B00436B45 /* UserSettingsViewController.m */; settings = {ASSET_TAGS = (); }; };
+		66B29AF11B87BD7C00684359 /* AWSMobileAnalytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66B29AF01B87BD7C00684359 /* AWSMobileAnalytics.framework */; };
+		6B0502F71B8BD99500DA1F24 /* SignIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B0502F51B8BD99500DA1F24 /* SignIn.storyboard */; };
+		6B443C4F1B5DB06200406B17 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B443C4E1B5DB06200406B17 /* main.m */; };
+		6B443C521B5DB06200406B17 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B443C511B5DB06200406B17 /* AppDelegate.m */; };
+		6B443C5A1B5DB06200406B17 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B443C591B5DB06200406B17 /* Images.xcassets */; };
+		6B443C771B5DB22500406B17 /* AWSMobileClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B443C731B5DB22500406B17 /* AWSMobileClient.m */; };
+		6B443C791B5DB2F100406B17 /* AWSCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B443C781B5DB2F100406B17 /* AWSCore.framework */; };
+		6B443C7C1B5DB42300406B17 /* AWSCognito.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B443C7B1B5DB42300406B17 /* AWSCognito.framework */; };
+		6B443C821B5DD72900406B17 /* AWSFacebookSignInProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B443C811B5DD72900406B17 /* AWSFacebookSignInProvider.m */; };
+		6B443C861B5DD8DC00406B17 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B443C831B5DD8DC00406B17 /* FBSDKCoreKit.framework */; };
+		6B443C871B5DD8DC00406B17 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B443C841B5DD8DC00406B17 /* FBSDKLoginKit.framework */; };
+		6B443C881B5DD8DC00406B17 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B443C851B5DD8DC00406B17 /* FBSDKShareKit.framework */; };
+		6B443C8B1B5DEC1F00406B17 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B443C8A1B5DEC1F00406B17 /* libsqlite3.dylib */; };
+		6B443C8D1B5DEC2800406B17 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B443C8C1B5DEC2800406B17 /* libz.dylib */; };
+		6B443C921B5E002E00406B17 /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B443C911B5E002E00406B17 /* SignInViewController.m */; };
+		6B443C951B5E031B00406B17 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B443C941B5E031B00406B17 /* MainViewController.m */; };
+		6B8A6F441B616B260035EA74 /* AWSIdentityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B8A6F431B616B260035EA74 /* AWSIdentityManager.m */; };
+		6B9E5DE61BAFDBF6005E71C9 /* UserDataStorage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B9E5DE51BAFDBF6005E71C9 /* UserDataStorage.storyboard */; settings = {ASSET_TAGS = (); }; };
+		6BB938921BAC68A200C527A0 /* PushNotification.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BB938901BAC68A200C527A0 /* PushNotification.storyboard */; };
+		6BB938931BAC68A200C527A0 /* PushNotificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB938911BAC68A200C527A0 /* PushNotificationViewController.m */; };
+		6BBC97B71BA358C300DC9B60 /* ColorThemeSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BBC97B61BA358C300DC9B60 /* ColorThemeSettings.m */; };
+		6BBC97BB1BA76A8200DC9B60 /* AWSTask+CheckExceptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BBC97BA1BA76A8200DC9B60 /* AWSTask+CheckExceptions.m */; };
+		6BBCBCAA1BB07C14001B8F35 /* UserSettings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BBCBCA91BB07C14001B8F35 /* UserSettings.storyboard */; settings = {ASSET_TAGS = (); }; };
+		6BCB928D1BAF889F00475B9E /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BCB928C1BAF889F00475B9E /* CoreMotion.framework */; };
+		6BCB92911BAF88D600475B9E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BCB92901BAF88D600475B9E /* CoreLocation.framework */; };
+		6BCB92931BAF896700475B9E /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BCB92921BAF896700475B9E /* AddressBook.framework */; };
+		6BE45F191B7A7D4F00344228 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BE45F181B7A7D4F00344228 /* Main.storyboard */; };
+		6BFF25811B5E360F002364F9 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BFF25801B5E360F002364F9 /* AssetsLibrary.framework */; };
+		6BFF25831B5E3617002364F9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BFF25821B5E3617002364F9 /* Foundation.framework */; };
+		6BFF258D1B5E364D002364F9 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BFF258C1B5E364D002364F9 /* MediaPlayer.framework */; };
+		6BFF258F1B5E3655002364F9 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BFF258E1B5E3655002364F9 /* Security.framework */; };
+		6BFF25911B5E366C002364F9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BFF25901B5E366C002364F9 /* UIKit.framework */; };
+		CE4ADF3B1BAA221D004F5676 /* AWSContentManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4ADF391BAA221D004F5676 /* AWSContentManager.m */; };
+		CE4ADF451BAA234D004F5676 /* AWSS3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE4ADF441BAA234D004F5676 /* AWSS3.framework */; };
+		CE9B0E831BB5DA0C0082D0CE /* UserFiles.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE9B0E801BB5DA0C0082D0CE /* UserFiles.storyboard */; settings = {ASSET_TAGS = (); }; };
+		CE9B0E841BB5DA0C0082D0CE /* UserFilesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9B0E821BB5DA0C0082D0CE /* UserFilesViewController.m */; settings = {ASSET_TAGS = (); }; };
+		CE9B0E871BB5E3ED0082D0CE /* UserDataStorageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9B0E861BB5E3ED0082D0CE /* UserDataStorageViewController.m */; settings = {ASSET_TAGS = (); }; };
+		CEA68A821B87E8E200744C02 /* AWSPushManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA68A811B87E8E200744C02 /* AWSPushManager.m */; };
+		CEA68A891B87EA7C00744C02 /* AWSSNS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEA68A881B87EA7C00744C02 /* AWSSNS.framework */; };
+		CED33FE31BB4900100B357CE /* AWSUserFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CED33FE21BB4900100B357CE /* AWSUserFileManager.m */; settings = {ASSET_TAGS = (); }; };
+		CED33FE51BB49B3D00B357CE /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CED33FE41BB49B3D00B357CE /* Launch Screen.storyboard */; settings = {ASSET_TAGS = (); }; };
+		FA59C7AC1BE2847000A71FDD /* AddTeamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA59C7AB1BE2847000A71FDD /* AddTeamViewController.m */; settings = {ASSET_TAGS = (); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		6605EA871BD7E1D0005A5016 /* AWSPushReceiverDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AWSPushReceiverDelegate.h; path = MySampleApp/AmazonAws/Push/AWSPushReceiverDelegate.h; sourceTree = SOURCE_ROOT; };
+		6605EA881BD7E557005A5016 /* PushReceiver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PushReceiver.h; path = Demo/Push/PushReceiver.h; sourceTree = "<group>"; };
+		6605EA891BD7E557005A5016 /* PushReceiver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PushReceiver.m; path = Demo/Push/PushReceiver.m; sourceTree = "<group>"; };
+		661104501B8751B600C8F1F4 /* UserIdentity.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = UserIdentity.storyboard; path = Demo/UserIdentity/UserIdentity.storyboard; sourceTree = "<group>"; };
+		661104521B8751EB00C8F1F4 /* MobileAnalytics.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = MobileAnalytics.storyboard; path = Demo/MobileAnalytics/MobileAnalytics.storyboard; sourceTree = "<group>"; };
+		661104541B87524E00C8F1F4 /* MobileAnalyticsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MobileAnalyticsViewController.h; path = Demo/MobileAnalytics/MobileAnalyticsViewController.h; sourceTree = "<group>"; };
+		661104551B87524E00C8F1F4 /* MobileAnalyticsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MobileAnalyticsViewController.m; path = Demo/MobileAnalytics/MobileAnalyticsViewController.m; sourceTree = "<group>"; };
+		661104571B87526700C8F1F4 /* UserIdentityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserIdentityViewController.h; path = Demo/UserIdentity/UserIdentityViewController.h; sourceTree = "<group>"; };
+		661104581B87526700C8F1F4 /* UserIdentityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserIdentityViewController.m; path = Demo/UserIdentity/UserIdentityViewController.m; sourceTree = "<group>"; };
+		6611045A1B8756F500C8F1F4 /* DemoFeature.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DemoFeature.h; path = demo/DemoFeature.h; sourceTree = "<group>"; };
+		6611045B1B8756F500C8F1F4 /* DemoFeature.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DemoFeature.m; path = demo/DemoFeature.m; sourceTree = "<group>"; };
+		6699C6501BBAF90B00436B45 /* UserSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserSettingsViewController.m; sourceTree = "<group>"; };
+		66B29AF01B87BD7C00684359 /* AWSMobileAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AWSMobileAnalytics.framework; path = MySampleApp/sdk/AWS/AWSMobileAnalytics.framework; sourceTree = "<group>"; };
+		6B0502F61B8BD99500DA1F24 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/SignIn.storyboard; sourceTree = "<group>"; };
+		6B0FDBDA1B68472800D38263 /* AWSIdentityManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AWSIdentityManager.h; path = identity/AWSIdentityManager.h; sourceTree = "<group>"; };
+		6B443C491B5DB06200406B17 /* TasinMockApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TasinMockApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B443C4E1B5DB06200406B17 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = main.m; path = app/main.m; sourceTree = "<group>"; };
+		6B443C501B5DB06200406B17 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = app/AppDelegate.h; sourceTree = "<group>"; };
+		6B443C511B5DB06200406B17 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = app/AppDelegate.m; sourceTree = "<group>"; };
+		6B443C591B5DB06200406B17 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = app/Images.xcassets; sourceTree = "<group>"; };
+		6B443C731B5DB22500406B17 /* AWSMobileClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AWSMobileClient.m; sourceTree = "<group>"; };
+		6B443C751B5DB22500406B17 /* AWSConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AWSConfiguration.h; sourceTree = "<group>"; };
+		6B443C761B5DB22500406B17 /* AWSMobileClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AWSMobileClient.h; sourceTree = "<group>"; };
+		6B443C781B5DB2F100406B17 /* AWSCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AWSCore.framework; path = MySampleApp/sdk/AWS/AWSCore.framework; sourceTree = "<group>"; };
+		6B443C7A1B5DB3A300406B17 /* AWSSignInProvider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AWSSignInProvider.h; sourceTree = "<group>"; };
+		6B443C7B1B5DB42300406B17 /* AWSCognito.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AWSCognito.framework; path = MySampleApp/sdk/AWS/extras/AWSCognito.framework; sourceTree = "<group>"; };
+		6B443C801B5DD6B100406B17 /* AWSFacebookSignInProvider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AWSFacebookSignInProvider.h; sourceTree = "<group>"; };
+		6B443C811B5DD72900406B17 /* AWSFacebookSignInProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AWSFacebookSignInProvider.m; sourceTree = "<group>"; };
+		6B443C831B5DD8DC00406B17 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = MySampleApp/sdk/facebook/FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		6B443C841B5DD8DC00406B17 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = MySampleApp/sdk/facebook/FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		6B443C851B5DD8DC00406B17 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = MySampleApp/sdk/facebook/FBSDKShareKit.framework; sourceTree = "<group>"; };
+		6B443C8A1B5DEC1F00406B17 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		6B443C8C1B5DEC2800406B17 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		6B443C901B5DFFF200406B17 /* SignInViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SignInViewController.h; sourceTree = "<group>"; };
+		6B443C911B5E002E00406B17 /* SignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignInViewController.m; sourceTree = "<group>"; };
+		6B443C931B5E030500406B17 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MainViewController.h; path = app/MainViewController.h; sourceTree = "<group>"; };
+		6B443C941B5E031B00406B17 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainViewController.m; path = app/MainViewController.m; sourceTree = "<group>"; };
+		6B8A6F431B616B260035EA74 /* AWSIdentityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AWSIdentityManager.m; path = identity/AWSIdentityManager.m; sourceTree = "<group>"; };
+		6B9E5DE51BAFDBF6005E71C9 /* UserDataStorage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = UserDataStorage.storyboard; path = Demo/UserDataStorage/UserDataStorage.storyboard; sourceTree = "<group>"; };
+		6BB938891BAA3CB700C527A0 /* ColorThemeSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorThemeSettings.h; sourceTree = "<group>"; };
+		6BB9388F1BAC68A200C527A0 /* PushNotificationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PushNotificationViewController.h; path = demo/push/PushNotificationViewController.h; sourceTree = "<group>"; };
+		6BB938901BAC68A200C527A0 /* PushNotification.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = PushNotification.storyboard; path = demo/push/PushNotification.storyboard; sourceTree = "<group>"; };
+		6BB938911BAC68A200C527A0 /* PushNotificationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PushNotificationViewController.m; path = demo/push/PushNotificationViewController.m; sourceTree = "<group>"; };
+		6BBC97B61BA358C300DC9B60 /* ColorThemeSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorThemeSettings.m; sourceTree = "<group>"; };
+		6BBC97B91BA7698600DC9B60 /* AWSTask+CheckExceptions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "AWSTask+CheckExceptions.h"; path = "../AmazonAws/Utils/AWSTask+CheckExceptions.h"; sourceTree = "<group>"; };
+		6BBC97BA1BA76A8200DC9B60 /* AWSTask+CheckExceptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "AWSTask+CheckExceptions.m"; path = "../AmazonAws/Utils/AWSTask+CheckExceptions.m"; sourceTree = "<group>"; };
+		6BBCBCA71BB07A31001B8F35 /* UserSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserSettingsViewController.h; path = MySampleApp/Demo/UserSettings/UserSettingsViewController.h; sourceTree = SOURCE_ROOT; };
+		6BBCBCA91BB07C14001B8F35 /* UserSettings.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = UserSettings.storyboard; path = MySampleApp/Demo/UserSettings/UserSettings.storyboard; sourceTree = SOURCE_ROOT; };
+		6BCB928C1BAF889F00475B9E /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		6BCB92901BAF88D600475B9E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		6BCB92921BAF896700475B9E /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		6BE45F181B7A7D4F00344228 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = app/Main.storyboard; sourceTree = "<group>"; };
+		6BFF25801B5E360F002364F9 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		6BFF25821B5E3617002364F9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		6BFF258C1B5E364D002364F9 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		6BFF258E1B5E3655002364F9 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		6BFF25901B5E366C002364F9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		CE4ADF381BAA221D004F5676 /* AWSContentManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AWSContentManager.h; path = ../AmazonAws/ContentDelivery/AWSContentManager.h; sourceTree = "<group>"; };
+		CE4ADF391BAA221D004F5676 /* AWSContentManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AWSContentManager.m; path = ../AmazonAws/ContentDelivery/AWSContentManager.m; sourceTree = "<group>"; };
+		CE4ADF3A1BAA221D004F5676 /* AWSCorePrivateHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AWSCorePrivateHeader.h; path = ../AmazonAws/ContentDelivery/AWSCorePrivateHeader.h; sourceTree = "<group>"; };
+		CE4ADF441BAA234D004F5676 /* AWSS3.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AWSS3.framework; path = MySampleApp/sdk/AWS/AWSS3.framework; sourceTree = "<group>"; };
+		CE9B0E801BB5DA0C0082D0CE /* UserFiles.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = UserFiles.storyboard; sourceTree = "<group>"; };
+		CE9B0E811BB5DA0C0082D0CE /* UserFilesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserFilesViewController.h; sourceTree = "<group>"; };
+		CE9B0E821BB5DA0C0082D0CE /* UserFilesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserFilesViewController.m; sourceTree = "<group>"; };
+		CE9B0E851BB5E3ED0082D0CE /* UserDataStorageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserDataStorageViewController.h; path = Demo/UserDataStorage/UserDataStorageViewController.h; sourceTree = "<group>"; };
+		CE9B0E861BB5E3ED0082D0CE /* UserDataStorageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserDataStorageViewController.m; path = Demo/UserDataStorage/UserDataStorageViewController.m; sourceTree = "<group>"; };
+		CEA68A801B87E8E200744C02 /* AWSPushManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AWSPushManager.h; path = push/AWSPushManager.h; sourceTree = "<group>"; };
+		CEA68A811B87E8E200744C02 /* AWSPushManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AWSPushManager.m; path = push/AWSPushManager.m; sourceTree = "<group>"; };
+		CEA68A881B87EA7C00744C02 /* AWSSNS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AWSSNS.framework; path = MySampleApp/sdk/AWS/AWSSNS.framework; sourceTree = "<group>"; };
+		CED33FE11BB4900100B357CE /* AWSUserFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AWSUserFileManager.h; sourceTree = "<group>"; };
+		CED33FE21BB4900100B357CE /* AWSUserFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AWSUserFileManager.m; sourceTree = "<group>"; };
+		CED33FE41BB49B3D00B357CE /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = "Launch Screen.storyboard"; path = "App/Launch Screen.storyboard"; sourceTree = "<group>"; };
+		FA59C7AA1BE2847000A71FDD /* AddTeamViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddTeamViewController.h; path = App/Src/AddTeamViewController.h; sourceTree = "<group>"; };
+		FA59C7AB1BE2847000A71FDD /* AddTeamViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddTeamViewController.m; path = App/Src/AddTeamViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6B443C461B5DB06200406B17 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B443C791B5DB2F100406B17 /* AWSCore.framework in Frameworks */,
+				6B443C7C1B5DB42300406B17 /* AWSCognito.framework in Frameworks */,
+				66B29AF11B87BD7C00684359 /* AWSMobileAnalytics.framework in Frameworks */,
+				CE4ADF451BAA234D004F5676 /* AWSS3.framework in Frameworks */,
+				CEA68A891B87EA7C00744C02 /* AWSSNS.framework in Frameworks */,
+				6B443C861B5DD8DC00406B17 /* FBSDKCoreKit.framework in Frameworks */,
+				6B443C871B5DD8DC00406B17 /* FBSDKLoginKit.framework in Frameworks */,
+				6B443C881B5DD8DC00406B17 /* FBSDKShareKit.framework in Frameworks */,
+				6BFF25831B5E3617002364F9 /* Foundation.framework in Frameworks */,
+				6BFF25911B5E366C002364F9 /* UIKit.framework in Frameworks */,
+				6BCB92931BAF896700475B9E /* AddressBook.framework in Frameworks */,
+				6BCB92911BAF88D600475B9E /* CoreLocation.framework in Frameworks */,
+				6BCB928D1BAF889F00475B9E /* CoreMotion.framework in Frameworks */,
+				6BFF258F1B5E3655002364F9 /* Security.framework in Frameworks */,
+				6BFF258D1B5E364D002364F9 /* MediaPlayer.framework in Frameworks */,
+				6BFF25811B5E360F002364F9 /* AssetsLibrary.framework in Frameworks */,
+				6B443C8D1B5DEC2800406B17 /* libz.dylib in Frameworks */,
+				6B443C8B1B5DEC1F00406B17 /* libsqlite3.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6B0502EF1B8B85C700DA1F24 /* Push */ = {
+			isa = PBXGroup;
+			children = (
+				6BB938901BAC68A200C527A0 /* PushNotification.storyboard */,
+				6BB9388F1BAC68A200C527A0 /* PushNotificationViewController.h */,
+				6BB938911BAC68A200C527A0 /* PushNotificationViewController.m */,
+				6605EA881BD7E557005A5016 /* PushReceiver.h */,
+				6605EA891BD7E557005A5016 /* PushReceiver.m */,
+			);
+			name = Push;
+			sourceTree = "<group>";
+		};
+		6B0502F01B8B86E600DA1F24 /* MobileAnalytics */ = {
+			isa = PBXGroup;
+			children = (
+				661104521B8751EB00C8F1F4 /* MobileAnalytics.storyboard */,
+				661104541B87524E00C8F1F4 /* MobileAnalyticsViewController.h */,
+				661104551B87524E00C8F1F4 /* MobileAnalyticsViewController.m */,
+			);
+			name = MobileAnalytics;
+			sourceTree = "<group>";
+		};
+		6B0502F11B8B86EF00DA1F24 /* UserIdentity */ = {
+			isa = PBXGroup;
+			children = (
+				661104501B8751B600C8F1F4 /* UserIdentity.storyboard */,
+				661104571B87526700C8F1F4 /* UserIdentityViewController.h */,
+				661104581B87526700C8F1F4 /* UserIdentityViewController.m */,
+			);
+			name = UserIdentity;
+			sourceTree = "<group>";
+		};
+		6B0502F41B8BD99500DA1F24 /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				6B0502F51B8BD99500DA1F24 /* SignIn.storyboard */,
+				6B443C901B5DFFF200406B17 /* SignInViewController.h */,
+				6B443C911B5E002E00406B17 /* SignInViewController.m */,
+			);
+			name = SignIn;
+			path = app/signin;
+			sourceTree = "<group>";
+		};
+		6B281C281B6A7FC6002FCF4F /* Identity */ = {
+			isa = PBXGroup;
+			children = (
+				6B0FDBDA1B68472800D38263 /* AWSIdentityManager.h */,
+				6B8A6F431B616B260035EA74 /* AWSIdentityManager.m */,
+			);
+			name = Identity;
+			sourceTree = "<group>";
+		};
+		6B281C291B6A7FDA002FCF4F /* App */ = {
+			isa = PBXGroup;
+			children = (
+				FA59C7A91BE279AD00A71FDD /* Add New Team */,
+				6B0502F41B8BD99500DA1F24 /* SignIn */,
+				6BE45F181B7A7D4F00344228 /* Main.storyboard */,
+				CED33FE41BB49B3D00B357CE /* Launch Screen.storyboard */,
+				6B443C501B5DB06200406B17 /* AppDelegate.h */,
+				6B443C511B5DB06200406B17 /* AppDelegate.m */,
+				6B443C931B5E030500406B17 /* MainViewController.h */,
+				6B443C941B5E031B00406B17 /* MainViewController.m */,
+				6B443C591B5DB06200406B17 /* Images.xcassets */,
+				6B443C4C1B5DB06200406B17 /* Supporting Files */,
+			);
+			name = App;
+			sourceTree = "<group>";
+		};
+		6B443C401B5DB06200406B17 = {
+			isa = PBXGroup;
+			children = (
+				6B443C4B1B5DB06200406B17 /* TasinMockApp */,
+				6B443C891B5DD94700406B17 /* Frameworks */,
+				6B443C4A1B5DB06200406B17 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6B443C4A1B5DB06200406B17 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6B443C491B5DB06200406B17 /* TasinMockApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6B443C4B1B5DB06200406B17 /* TasinMockApp */ = {
+			isa = PBXGroup;
+			children = (
+				6BCE395E1B7E55C4009BAC85 /* Demo */,
+				6B281C291B6A7FDA002FCF4F /* App */,
+				6B443C721B5DB22500406B17 /* AmazonAws */,
+			);
+			name = TasinMockApp;
+			path = MySampleApp;
+			sourceTree = "<group>";
+		};
+		6B443C4C1B5DB06200406B17 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6B443C4E1B5DB06200406B17 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6B443C721B5DB22500406B17 /* AmazonAws */ = {
+			isa = PBXGroup;
+			children = (
+				6BBC97B81BA766E000DC9B60 /* Utils */,
+				6B8A6F401B5ECF0D0035EA74 /* SignIn */,
+				6B281C281B6A7FC6002FCF4F /* Identity */,
+				CEA68A7C1B87E89600744C02 /* Push */,
+				CE4ADF371BAA21ED004F5676 /* ContentDelivery */,
+				CED33FE01BB4900100B357CE /* UserFiles */,
+				6B443C761B5DB22500406B17 /* AWSMobileClient.h */,
+				6B443C731B5DB22500406B17 /* AWSMobileClient.m */,
+				6B443C751B5DB22500406B17 /* AWSConfiguration.h */,
+			);
+			name = AmazonAws;
+			path = amazonaws;
+			sourceTree = "<group>";
+		};
+		6B443C891B5DD94700406B17 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6BCB92921BAF896700475B9E /* AddressBook.framework */,
+				6BCB92901BAF88D600475B9E /* CoreLocation.framework */,
+				6BCB928C1BAF889F00475B9E /* CoreMotion.framework */,
+				CE4ADF441BAA234D004F5676 /* AWSS3.framework */,
+				CEA68A881B87EA7C00744C02 /* AWSSNS.framework */,
+				66B29AF01B87BD7C00684359 /* AWSMobileAnalytics.framework */,
+				6BFF25901B5E366C002364F9 /* UIKit.framework */,
+				6BFF258E1B5E3655002364F9 /* Security.framework */,
+				6BFF258C1B5E364D002364F9 /* MediaPlayer.framework */,
+				6BFF25821B5E3617002364F9 /* Foundation.framework */,
+				6BFF25801B5E360F002364F9 /* AssetsLibrary.framework */,
+				6B443C8C1B5DEC2800406B17 /* libz.dylib */,
+				6B443C8A1B5DEC1F00406B17 /* libsqlite3.dylib */,
+				6B443C831B5DD8DC00406B17 /* FBSDKCoreKit.framework */,
+				6B443C841B5DD8DC00406B17 /* FBSDKLoginKit.framework */,
+				6B443C851B5DD8DC00406B17 /* FBSDKShareKit.framework */,
+				6B443C7B1B5DB42300406B17 /* AWSCognito.framework */,
+				6B443C781B5DB2F100406B17 /* AWSCore.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6B8A6F401B5ECF0D0035EA74 /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				6B443C7A1B5DB3A300406B17 /* AWSSignInProvider.h */,
+				6B443C801B5DD6B100406B17 /* AWSFacebookSignInProvider.h */,
+				6B443C811B5DD72900406B17 /* AWSFacebookSignInProvider.m */,
+			);
+			name = SignIn;
+			path = signin;
+			sourceTree = "<group>";
+		};
+		6B9E5DE41BAFDB3F005E71C9 /* UserDataStorage */ = {
+			isa = PBXGroup;
+			children = (
+				6B9E5DE51BAFDBF6005E71C9 /* UserDataStorage.storyboard */,
+				CE9B0E851BB5E3ED0082D0CE /* UserDataStorageViewController.h */,
+				CE9B0E861BB5E3ED0082D0CE /* UserDataStorageViewController.m */,
+			);
+			name = UserDataStorage;
+			sourceTree = "<group>";
+		};
+		6BBC97AE1BA244E000DC9B60 /* UserSettings */ = {
+			isa = PBXGroup;
+			children = (
+				6BB938891BAA3CB700C527A0 /* ColorThemeSettings.h */,
+				6BBC97B61BA358C300DC9B60 /* ColorThemeSettings.m */,
+				6BBCBCA91BB07C14001B8F35 /* UserSettings.storyboard */,
+				6BBCBCA71BB07A31001B8F35 /* UserSettingsViewController.h */,
+				6699C6501BBAF90B00436B45 /* UserSettingsViewController.m */,
+			);
+			name = UserSettings;
+			path = Demo/UserSettings;
+			sourceTree = "<group>";
+		};
+		6BBC97B81BA766E000DC9B60 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				6BBC97B91BA7698600DC9B60 /* AWSTask+CheckExceptions.h */,
+				6BBC97BA1BA76A8200DC9B60 /* AWSTask+CheckExceptions.m */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		6BCE395E1B7E55C4009BAC85 /* Demo */ = {
+			isa = PBXGroup;
+			children = (
+				6611045A1B8756F500C8F1F4 /* DemoFeature.h */,
+				6611045B1B8756F500C8F1F4 /* DemoFeature.m */,
+				CE9B0E7F1BB5DA0C0082D0CE /* UserFiles */,
+				6BBC97AE1BA244E000DC9B60 /* UserSettings */,
+				6B9E5DE41BAFDB3F005E71C9 /* UserDataStorage */,
+				CE4ADF3C1BAA2226004F5676 /* ContentDelivery */,
+				6B0502F11B8B86EF00DA1F24 /* UserIdentity */,
+				6B0502F01B8B86E600DA1F24 /* MobileAnalytics */,
+				6B0502EF1B8B85C700DA1F24 /* Push */,
+			);
+			name = Demo;
+			sourceTree = "<group>";
+		};
+		CE4ADF371BAA21ED004F5676 /* ContentDelivery */ = {
+			isa = PBXGroup;
+			children = (
+				CE4ADF381BAA221D004F5676 /* AWSContentManager.h */,
+				CE4ADF391BAA221D004F5676 /* AWSContentManager.m */,
+				CE4ADF3A1BAA221D004F5676 /* AWSCorePrivateHeader.h */,
+			);
+			name = ContentDelivery;
+			sourceTree = "<group>";
+		};
+		CE4ADF3C1BAA2226004F5676 /* ContentDelivery */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ContentDelivery;
+			sourceTree = "<group>";
+		};
+		CE9B0E7F1BB5DA0C0082D0CE /* UserFiles */ = {
+			isa = PBXGroup;
+			children = (
+				CE9B0E801BB5DA0C0082D0CE /* UserFiles.storyboard */,
+				CE9B0E811BB5DA0C0082D0CE /* UserFilesViewController.h */,
+				CE9B0E821BB5DA0C0082D0CE /* UserFilesViewController.m */,
+			);
+			name = UserFiles;
+			path = Demo/UserFiles;
+			sourceTree = "<group>";
+		};
+		CEA68A7C1B87E89600744C02 /* Push */ = {
+			isa = PBXGroup;
+			children = (
+				CEA68A801B87E8E200744C02 /* AWSPushManager.h */,
+				CEA68A811B87E8E200744C02 /* AWSPushManager.m */,
+				6605EA871BD7E1D0005A5016 /* AWSPushReceiverDelegate.h */,
+			);
+			name = Push;
+			sourceTree = "<group>";
+		};
+		CED33FE01BB4900100B357CE /* UserFiles */ = {
+			isa = PBXGroup;
+			children = (
+				CED33FE11BB4900100B357CE /* AWSUserFileManager.h */,
+				CED33FE21BB4900100B357CE /* AWSUserFileManager.m */,
+			);
+			name = UserFiles;
+			path = MySampleApp/AmazonAws/UserFiles;
+			sourceTree = SOURCE_ROOT;
+		};
+		FA59C7A91BE279AD00A71FDD /* Add New Team */ = {
+			isa = PBXGroup;
+			children = (
+				FA59C7AA1BE2847000A71FDD /* AddTeamViewController.h */,
+				FA59C7AB1BE2847000A71FDD /* AddTeamViewController.m */,
+			);
+			name = "Add New Team";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6B443C481B5DB06200406B17 /* TasinMockApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6B443C6C1B5DB06200406B17 /* Build configuration list for PBXNativeTarget "TasinMockApp" */;
+			buildPhases = (
+				6B443C451B5DB06200406B17 /* Sources */,
+				6B443C461B5DB06200406B17 /* Frameworks */,
+				6B443C471B5DB06200406B17 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TasinMockApp;
+			productName = MySampleApp;
+			productReference = 6B443C491B5DB06200406B17 /* TasinMockApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6B443C411B5DB06200406B17 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = Amazon;
+				TargetAttributes = {
+					6B443C481B5DB06200406B17 = {
+						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = 486WF39AWN;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = 6B443C441B5DB06200406B17 /* Build configuration list for PBXProject "TasinMockApp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6B443C401B5DB06200406B17;
+			productRefGroup = 6B443C4A1B5DB06200406B17 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6B443C481B5DB06200406B17 /* TasinMockApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6B443C471B5DB06200406B17 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B0502F71B8BD99500DA1F24 /* SignIn.storyboard in Resources */,
+				CED33FE51BB49B3D00B357CE /* Launch Screen.storyboard in Resources */,
+				6BBCBCAA1BB07C14001B8F35 /* UserSettings.storyboard in Resources */,
+				661104531B8751EB00C8F1F4 /* MobileAnalytics.storyboard in Resources */,
+				6BE45F191B7A7D4F00344228 /* Main.storyboard in Resources */,
+				6B443C5A1B5DB06200406B17 /* Images.xcassets in Resources */,
+				661104511B8751B600C8F1F4 /* UserIdentity.storyboard in Resources */,
+				6BB938921BAC68A200C527A0 /* PushNotification.storyboard in Resources */,
+				CE9B0E831BB5DA0C0082D0CE /* UserFiles.storyboard in Resources */,
+				6B9E5DE61BAFDBF6005E71C9 /* UserDataStorage.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6B443C451B5DB06200406B17 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				661104561B87524E00C8F1F4 /* MobileAnalyticsViewController.m in Sources */,
+				FA59C7AC1BE2847000A71FDD /* AddTeamViewController.m in Sources */,
+				6BBC97BB1BA76A8200DC9B60 /* AWSTask+CheckExceptions.m in Sources */,
+				6BBC97B71BA358C300DC9B60 /* ColorThemeSettings.m in Sources */,
+				CED33FE31BB4900100B357CE /* AWSUserFileManager.m in Sources */,
+				6B443C921B5E002E00406B17 /* SignInViewController.m in Sources */,
+				6605EA8A1BD7E557005A5016 /* PushReceiver.m in Sources */,
+				CEA68A821B87E8E200744C02 /* AWSPushManager.m in Sources */,
+				6BB938931BAC68A200C527A0 /* PushNotificationViewController.m in Sources */,
+				6699C6511BBAF90B00436B45 /* UserSettingsViewController.m in Sources */,
+				6B443C521B5DB06200406B17 /* AppDelegate.m in Sources */,
+				6B443C771B5DB22500406B17 /* AWSMobileClient.m in Sources */,
+				CE9B0E841BB5DA0C0082D0CE /* UserFilesViewController.m in Sources */,
+				6611045C1B8756F500C8F1F4 /* DemoFeature.m in Sources */,
+				6B443C951B5E031B00406B17 /* MainViewController.m in Sources */,
+				661104591B87526700C8F1F4 /* UserIdentityViewController.m in Sources */,
+				CE9B0E871BB5E3ED0082D0CE /* UserDataStorageViewController.m in Sources */,
+				6B443C821B5DD72900406B17 /* AWSFacebookSignInProvider.m in Sources */,
+				6B8A6F441B616B260035EA74 /* AWSIdentityManager.m in Sources */,
+				CE4ADF3B1BAA221D004F5676 /* AWSContentManager.m in Sources */,
+				6B443C4F1B5DB06200406B17 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		6B0502F51B8BD99500DA1F24 /* SignIn.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6B0502F61B8BD99500DA1F24 /* en */,
+			);
+			name = SignIn.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6B443C6A1B5DB06200406B17 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"$(OTHER_LDFLAGS)",
+					"-ObjC",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6B443C6B1B5DB06200406B17 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = (
+					"$(OTHER_LDFLAGS)",
+					"-ObjC",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6B443C6D1B5DB06200406B17 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = BrandAsset;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MySampleApp/sdk/aws/extras",
+					"$(PROJECT_DIR)/MySampleApp/sdk/facebook",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/MySampleApp/sdk/google",
+					"$(PROJECT_DIR)/MySampleApp/sdk/twitter",
+					"$(PROJECT_DIR)/MySampleApp/sdk/aws",
+					"$(PROJECT_DIR)/MySampleApp/sdk/AWS",
+					"$(PROJECT_DIR)/MySampleApp/sdk/AWS/extras",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/MySampleApp/app/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tasin.MockApp;
+				PRODUCT_NAME = TasinMockApp;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6B443C6E1B5DB06200406B17 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = BrandAsset;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MySampleApp/sdk/facebook",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/MySampleApp/sdk/google",
+					"$(PROJECT_DIR)/MySampleApp/sdk/twitter",
+					"$(PROJECT_DIR)/MySampleApp/sdk/aws",
+					"$(PROJECT_DIR)/MySampleApp/sdk/aws/extras",
+					"$(PROJECT_DIR)/MySampleApp/sdk/AWS",
+					"$(PROJECT_DIR)/MySampleApp/sdk/AWS/extras",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/MySampleApp/app/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tasin.MockApp;
+				PRODUCT_NAME = TasinMockApp;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6B443C441B5DB06200406B17 /* Build configuration list for PBXProject "TasinMockApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6B443C6A1B5DB06200406B17 /* Debug */,
+				6B443C6B1B5DB06200406B17 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6B443C6C1B5DB06200406B17 /* Build configuration list for PBXNativeTarget "TasinMockApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6B443C6D1B5DB06200406B17 /* Debug */,
+				6B443C6E1B5DB06200406B17 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6B443C411B5DB06200406B17 /* Project object */;
+}
