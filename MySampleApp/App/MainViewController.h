@@ -10,8 +10,9 @@
 //
 
 #import <UIKit/UIKit.h>
+@import CoreLocation;
 
-@interface MainViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate>
+@interface MainViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate, CLLocationManagerDelegate>
 
 @end
 

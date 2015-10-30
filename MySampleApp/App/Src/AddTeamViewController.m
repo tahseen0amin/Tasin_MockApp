@@ -7,6 +7,7 @@
 //
 
 #import "AddTeamViewController.h"
+#import "TeamProfileCollectionViewController.h"
 
 @interface AddTeamViewController (){
     BOOL imageTaken, nameChoosen;
@@ -23,6 +24,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle:@"Join Team" style:UIBarButtonItemStylePlain target:self action:@selector(joinTeamButtonClicked)];
+    self.navigationItem.rightBarButtonItem = item;
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -50,6 +54,7 @@
 }
 
 - (IBAction)TakeSelfie:(id)sender {
+    /*
     UIImagePickerController *picker = [[UIImagePickerController alloc] init];
     if (![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
         
@@ -72,7 +77,9 @@
         
         [self presentViewController:picker animated:YES completion:NULL];
     }
-    
+    */
+    TeamProfileCollectionViewController *nextCo = [[TeamProfileCollectionViewController alloc] initWithNibName:@"TeamProfileCollectionViewController" bundle:nil];
+    [self.navigationController pushViewController:nextCo animated:YES];
 }
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
@@ -87,6 +94,10 @@
     if ([self nextButtonEnabled]) {
         // segue to different controller
     }
+}
+
+- (void)joinTeamButtonClicked{
+    [self performSegueWithIdentifier:@"JoinTeamSegue" sender:self];
 }
 
 @end

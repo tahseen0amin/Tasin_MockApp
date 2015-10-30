@@ -15,6 +15,8 @@
 #import "AWSIdentityManager.h"
 #import "ColorThemeSettings.h"
 
+
+
 static NSString * LOG_TAG = @"MainViewController";
 
 @interface MainViewController ()
@@ -23,6 +25,8 @@ static NSString * LOG_TAG = @"MainViewController";
 
 @property (nonatomic, strong) id didSignInObserver;
 @property (nonatomic, strong) id didSignOutObserver;
+
+@property (nonatomic, strong) CLLocationManager *locationManager;
 
 @end
 
@@ -88,6 +92,16 @@ static NSString * LOG_TAG = @"MainViewController";
                                                                             }];
 
     [self setupRightBarButtonItem];
+    
+    // CLLocationManager
+    self.locationManager = [[CLLocationManager alloc]init];
+    self.locationManager.delegate = self;
+    if ([self.locationManager respondsToSelector:@selector(requestAlwaysAuthorization)]) {
+        [self.locationManager requestAlwaysAuthorization];
+    } else {
+        // set up geo fence
+    }
+    [self.locationManager startUpdatingLocation];
 }
 
 - (void)dealloc {
@@ -186,6 +200,76 @@ static NSString * LOG_TAG = @"MainViewController";
     }
 }
 
+#pragma mark - GEO LOCATION CODE
+// Location Manager Delegate Methods
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
+    NSLog(@"Location ::::::::   %@", [locations lastObject]);
+    CLLocationCoordinate2D center = CLLocationCoordinate2DMake(42.358381,
+                                                               -71.066669);
+    CLCircularRegion *region = [[CLCircularRegion alloc] initWithCenter:center radius:200 identifier:@"BeaconHill"];
+    CLLocation *lastLocation = [locations lastObject];
+    if ([region containsCoordinate:lastLocation.coordinate]) {
+        NSLog(@"User IS IN BEACON HILL ::: Location UPdater");
+    } else {
+        NSLog(@"User IS NOT IN BEACON HILL :::: Location Updater");
+    }
+    
+    [self.locationManager stopUpdatingLocation];
+    
+    
+}
+
+-(void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status {
+    switch (status) {
+        case kCLAuthorizationStatusAuthorizedAlways:
+            [self setUpGeoFence];
+            return;
+            
+        case kCLAuthorizationStatusDenied:
+        case kCLAuthorizationStatusRestricted:
+            [self showSorryAlert];
+            return;
+        case kCLAuthorizationStatusNotDetermined:
+        case kCLAuthorizationStatusAuthorizedWhenInUse:
+            return;
+    }
+}
+
+- (void)setUpGeoFence{
+    CLLocationCoordinate2D center = CLLocationCoordinate2DMake(42.358381,
+                                                               -71.066669);
+    CLRegion *bridge = [[CLCircularRegion alloc]initWithCenter:center
+                                                        radius:200.0
+                                                    identifier:@"BeaconHill"];
+    
+    [self.locationManager startMonitoringForRegion:bridge];
+}
+
+- (void)locationManager:(CLLocationManager *)manager didStartMonitoringForRegion:(CLRegion *)region {
+    NSLog(@"Region ::: %@", region.description);
+    
+}
+
+- (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error {
+    NSLog(@"Location Manager Error :: %@", error.localizedDescription);
+}
+
+- (void)locationManager:(CLLocationManager *)manager didEnterRegion:(CLRegion *)region {
+    NSLog(@"USER Entered IN THE BEACON HILL ");
+}
+
+- (void)locationManager:(CLLocationManager *)manager didExitRegion:(CLRegion *)region {
+    NSLog(@"USER LEFT THE BEACON HILL ");
+}
+
+- (void)showSorryAlert {
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Location Permission Denied" message:@"Sorry we won't be able to let you know correctly as you have disabled the location for this app. You can change it back in Settings" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *done = [UIAlertAction actionWithTitle:@"OK"
+                                                   style:UIAlertActionStyleCancel
+                                                 handler:nil];
+    [alertController addAction:done];
+    [self presentViewController:alertController animated:YES completion:nil];
+}
 @end
 
 @implementation FeatureDescriptionViewController
@@ -198,5 +282,6 @@ static NSString * LOG_TAG = @"MainViewController";
                                                                             target:nil
                                                                             action:nil];
 }
+
 
 @end

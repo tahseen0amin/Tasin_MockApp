@@ -79,6 +79,10 @@
 			</dict>
 		</dict>
 	</dict>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>This will allow us to find people around you</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>This will allow us to find people around you</string>
 	<key>UILaunchStoryboardName</key>
 	<string>Launch Screen</string>
 	<key>UIMainStoryboardFile</key>
