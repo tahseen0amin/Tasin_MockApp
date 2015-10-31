@@ -56,7 +56,7 @@
                             <outlet property="delegate" destination="HKv-yk-r7M" id="fud-wm-l1m"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="My Sample App" id="tnJ-fz-jtg">
+                    <navigationItem key="navigationItem" title="Tasin Mock App" id="tnJ-fz-jtg">
                         <barButtonItem key="leftBarButtonItem" title="Splash" id="8AB-5r-Ejs">
                             <connections>
                                 <segue destination="5Vi-dX-YIH" kind="show" id="JzP-i2-Jb2"/>
@@ -163,7 +163,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4aP-Pi-QEP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2991" y="467"/>
+            <point key="canvasLocation" x="2990" y="459"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="2QV-sK-Lig">
@@ -420,7 +420,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nRS-Cp-BdM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2179" y="467"/>
+            <point key="canvasLocation" x="2251" y="459"/>
         </scene>
     </scenes>
     <resources>

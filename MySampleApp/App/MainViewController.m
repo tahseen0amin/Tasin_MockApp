@@ -211,13 +211,12 @@ static NSString * LOG_TAG = @"MainViewController";
     CLLocation *lastLocation = [locations lastObject];
     if ([region containsCoordinate:lastLocation.coordinate]) {
         NSLog(@"User IS IN BEACON HILL ::: Location UPdater");
+        [self showAlertWithTitle:nil AndMessage:@"Hey! While you are in Beacon Hill, check out some of these bars"];
     } else {
         NSLog(@"User IS NOT IN BEACON HILL :::: Location Updater");
     }
     
     [self.locationManager stopUpdatingLocation];
-    
-    
 }
 
 
@@ -259,6 +258,7 @@ static NSString * LOG_TAG = @"MainViewController";
 
 - (void)locationManager:(CLLocationManager *)manager didEnterRegion:(CLRegion *)region {
     NSLog(@"USER Entered IN THE BEACON HILL ");
+    [self showAlertWithTitle:nil AndMessage:@"Hey! While you are in Beacon Hill, check out some of these bars"];
 }
 
 - (void)locationManager:(CLLocationManager *)manager didExitRegion:(CLRegion *)region {
