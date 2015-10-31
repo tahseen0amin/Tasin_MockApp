@@ -11,7 +11,6 @@
 
 #import <Foundation/Foundation.h>
 #import "MainViewController.h"
-#import "DemoFeature.h"
 #import "AWSIdentityManager.h"
 #import "ColorThemeSettings.h"
 
@@ -21,7 +20,6 @@ static NSString * LOG_TAG = @"MainViewController";
 
 @interface MainViewController ()
 
-@property (nonatomic, strong) NSMutableArray *demoFeatures;
 
 @property (nonatomic, strong) id didSignInObserver;
 @property (nonatomic, strong) id didSignOutObserver;
@@ -48,32 +46,7 @@ static NSString * LOG_TAG = @"MainViewController";
     [self presentSignInViewController];
 
     NSLog(@"%@: Loading...", LOG_TAG);
-    self.demoFeatures = [[NSMutableArray alloc] init];
-
-    DemoFeature *demoFeature = [[DemoFeature alloc] initWithName:NSLocalizedString(@"User Sign-in", @"Label for demo menu option.")
-                                                          detail:NSLocalizedString(@"Enable user login with popular 3rd party providers.", @"Description for demo menu option.")
-                                                            icon:@"UserIdentityIcon"
-                                                      storyboard:@"UserIdentity"];
-    [self.demoFeatures addObject:demoFeature];
-
-    demoFeature = [[DemoFeature alloc] initWithName:NSLocalizedString(@"Push Notifications", @"Label for demo menu option.")
-                                detail:NSLocalizedString(@"Send individual or group push notifications to your apps.", @"Description for demo menu option.")
-                                  icon:@"PushIcon"
-                            storyboard:@"PushNotification"];
-    [self.demoFeatures addObject:demoFeature];
-
-    demoFeature = [[DemoFeature alloc] initWithName:NSLocalizedString(@"User Data Storage", @"Label for demo menu option.")
-                                detail:NSLocalizedString(@"Save user files in the cloud and sync user data in key/value pairs.", @"Description for demo menu option.")
-                                  icon:@"UserFilesIcon"
-                            storyboard:@"UserDataStorage"];
-    [self.demoFeatures addObject:demoFeature];
-
-    demoFeature = [[DemoFeature alloc] initWithName:NSLocalizedString(@"Mobile Analytics", @"Label for demo menu option.")
-                                detail:NSLocalizedString(@"Collect, visualize and export app usage metrics.", @"Description for demo menu option.")
-                                  icon:@"MobileAnalyticsIcon"
-                            storyboard:@"MobileAnalytics"];
-    [self.demoFeatures addObject:demoFeature];
-
+    
     __weak MainViewController *weakSelf = self;
     self.didSignInObserver =[[NSNotificationCenter defaultCenter] addObserverForName:AWSIdentityManagerDidSignInNotification
                                                                               object:[AWSIdentityManager sharedInstance]
@@ -140,31 +113,47 @@ static NSString * LOG_TAG = @"MainViewController";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MainViewCell"];
+    switch (indexPath.row) {
+        case 0:
+            cell.imageView.image = [UIImage imageNamed:@""];
+            cell.textLabel.text = @"Create New Team";
+            cell.detailTextLabel.text = @"Lets you create new team and then add new members";
+            break;
+        case 1:
+            cell.imageView.image = [UIImage imageNamed:@""];
+            cell.textLabel.text = @"Join Existing Team";
+            cell.detailTextLabel.text = @"Scroll through existing teams and find your team your friend has made";
+            break;
+            
+        default:
+            break;
+    }
     
-    DemoFeature *demoFeature = self.demoFeatures[indexPath.row];
-    cell.imageView.image = [UIImage imageNamed:[demoFeature icon]];
-    cell.textLabel.text = [demoFeature displayName];
-    cell.detailTextLabel.text = [demoFeature detailText];
+    
 
     return cell;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [self.demoFeatures count];
+    return 2;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    DemoFeature *demoFeature = [self.demoFeatures objectAtIndex:indexPath.row];
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:demoFeature.storyboard
-                                                         bundle:nil];
-    UIViewController *viewController = [storyboard instantiateViewControllerWithIdentifier:demoFeature.storyboard];
-    
-    [self.navigationController pushViewController:viewController
-                                         animated:YES];
+    switch (indexPath.row) {
+        case 0:
+            [self performSegueWithIdentifier:@"AddNewTeam" sender:self];
+            break;
+        case 1:
+            [self performSegueWithIdentifier:@"JoinTeam" sender:self];
+            break;
+            
+        default:
+            break;
+    }
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    return [NSString stringWithFormat:@"Logged in as : %@",[[AWSIdentityManager sharedInstance] userName]];
+    return [NSString stringWithFormat:@"  Logged in as : %@",[[AWSIdentityManager sharedInstance] userName]];
 }
 
 #pragma mark -

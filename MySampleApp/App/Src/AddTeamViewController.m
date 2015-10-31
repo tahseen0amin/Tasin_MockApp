@@ -24,9 +24,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle:@"Join Team" style:UIBarButtonItemStylePlain target:self action:@selector(joinTeamButtonClicked)];
-    self.navigationItem.rightBarButtonItem = item;
     
+    self.TeamNameTF.hidden = YES;
+    [self TakeSelfie:nil];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -46,6 +46,7 @@
     if (textField.text.length > 0) {
         nameChoosen = YES;
         self.teamName = textField.text;
+        [self segueToAnotherController];
     }
 }
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
@@ -54,7 +55,10 @@
 }
 
 - (IBAction)TakeSelfie:(id)sender {
-    /*
+    TeamProfileCollectionViewController *nextCo = [[TeamProfileCollectionViewController alloc] initWithNibName:@"TeamProfileCollectionViewController" bundle:nil];
+    UINavigationController *cont = [[UINavigationController alloc] initWithRootViewController:nextCo];
+    [self presentViewController:cont animated:YES completion:nil];
+    
     UIImagePickerController *picker = [[UIImagePickerController alloc] init];
     if (![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
         
@@ -68,7 +72,11 @@
         
         [self presentViewController:alertController
                            animated:YES
-                         completion:nil];
+                         completion:^{
+                             imageTaken = YES;
+                             self.TeamNameTF.hidden = NO;
+                             [self.TeamNameTF becomeFirstResponder];
+                         }];
     } else {
         picker.delegate = self;
         picker.allowsEditing = YES;
@@ -77,9 +85,8 @@
         
         [self presentViewController:picker animated:YES completion:NULL];
     }
-    */
-    TeamProfileCollectionViewController *nextCo = [[TeamProfileCollectionViewController alloc] initWithNibName:@"TeamProfileCollectionViewController" bundle:nil];
-    [self.navigationController pushViewController:nextCo animated:YES];
+
+    
 }
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
@@ -88,16 +95,20 @@
     } else if ([info objectForKey:UIImagePickerControllerOriginalImage]){
         self.teamImage = [info objectForKey:UIImagePickerControllerOriginalImage];
     }
+    
+    imageTaken = YES;
+    self.TeamNameTF.hidden = NO;
+    [self.TeamNameTF becomeFirstResponder];
 }
 
 - (void)segueToAnotherController {
     if ([self nextButtonEnabled]) {
         // segue to different controller
+         TeamProfileCollectionViewController *nextCo = [[TeamProfileCollectionViewController alloc] initWithNibName:@"TeamProfileCollectionViewController" bundle:nil];
+        UINavigationController *cont = [[UINavigationController alloc] initWithRootViewController:nextCo];
+        [self presentViewController:cont animated:YES completion:nil];
+        
     }
-}
-
-- (void)joinTeamButtonClicked{
-    [self performSegueWithIdentifier:@"JoinTeamSegue" sender:self];
 }
 
 @end

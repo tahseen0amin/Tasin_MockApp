@@ -38,6 +38,18 @@ static NSString * const reuseIdentifierForHeader = @"HeaderCell";
     // add a navigation bar button for addNew Team mate
     UIBarButtonItem *addMate = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addTeamMateClicked:)];
     self.navigationItem.rightBarButtonItem = addMate;
+    
+    UIBarButtonItem *home = [[UIBarButtonItem alloc]initWithTitle:@"Home" style:UIBarButtonItemStylePlain target:self action:@selector(homeButtonClicked)];
+    self.navigationItem.leftBarButtonItem = home;
+}
+
+- (void)homeButtonClicked{
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main"
+                                                         bundle:nil];
+    UINavigationController *navController = [storyboard instantiateViewControllerWithIdentifier:@"HomeNavigation"];
+    
+    [self presentViewController:navController animated:YES completion:nil];
+
 }
 
 - (void)didReceiveMemoryWarning {

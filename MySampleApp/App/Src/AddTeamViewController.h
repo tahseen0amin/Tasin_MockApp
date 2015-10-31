@@ -10,4 +10,6 @@
 
 @interface AddTeamViewController : UIViewController<UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate>
 
+@property (weak, nonatomic) IBOutlet UITextField *TeamNameTF;
+
 @end

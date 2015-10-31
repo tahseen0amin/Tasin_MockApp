@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MySampleApp/App/Src/TeamProfileCollectionViewController.m"
-            timestampString = "467915150.184909"
+            timestampString = "467980749.589957"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "154"
-            endingLineNumber = "154"
+            startingLineNumber = "166"
+            endingLineNumber = "166"
             landmarkName = "@implementation TeamProfileCollectionViewController"
             landmarkType = "3">
          </BreakpointContent>

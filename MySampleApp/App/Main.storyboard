@@ -56,22 +56,20 @@
                             <outlet property="delegate" destination="HKv-yk-r7M" id="fud-wm-l1m"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Tasin Mock App" id="tnJ-fz-jtg">
-                        <barButtonItem key="leftBarButtonItem" title="Splash" id="8AB-5r-Ejs">
-                            <connections>
-                                <segue destination="5Vi-dX-YIH" kind="show" id="JzP-i2-Jb2"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Tasin Mock App" id="tnJ-fz-jtg"/>
+                    <connections>
+                        <segue destination="5Vi-dX-YIH" kind="show" identifier="AddNewTeam" id="AKS-7r-IDJ"/>
+                        <segue destination="qoW-9f-Fbz" kind="show" identifier="JoinTeam" id="dos-EY-ebr"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0lx-xM-3gj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1453" y="468"/>
         </scene>
-        <!--View Controller-->
+        <!--Home Menu View Controller-->
         <scene sceneID="OqL-az-x6G">
             <objects>
-                <viewController id="ZhM-Gd-zsb" sceneMemberID="viewController">
+                <viewController id="ZhM-Gd-zsb" customClass="HomeMenuViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ze0-p2-buC"/>
                         <viewControllerLayoutGuide type="bottom" id="PU8-Hr-yeY"/>
@@ -165,10 +163,10 @@
             </objects>
             <point key="canvasLocation" x="2990" y="459"/>
         </scene>
-        <!--Table View Controller-->
+        <!--View TeamTVC-->
         <scene sceneID="2QV-sK-Lig">
             <objects>
-                <tableViewController id="6ro-A1-qAw" sceneMemberID="viewController">
+                <tableViewController id="6ro-A1-qAw" customClass="ViewTeamTVC" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="150" sectionHeaderHeight="28" sectionFooterHeight="28" id="7TW-MB-17C">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -299,7 +297,7 @@
                     </view>
                     <toolbarItems/>
                     <connections>
-                        <segue destination="qoW-9f-Fbz" kind="show" identifier="JoinTeamSegue" id="SSG-Ok-ISQ"/>
+                        <outlet property="TeamNameTF" destination="Ygs-EH-oMA" id="6Ur-56-u6s"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZYt-0R-mCJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -376,7 +374,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pzu-Jd-J4a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1716" y="1212"/>
+            <point key="canvasLocation" x="1916" y="1221"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="iLu-if-voD">
@@ -406,7 +404,7 @@
         <!--Navigation Controller-->
         <scene sceneID="l5S-9l-HhC">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="GWE-2C-s9d" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="HomeNavigation" automaticallyAdjustsScrollViewInsets="NO" id="GWE-2C-s9d" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="GXF-xi-NvT">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>

@@ -61,6 +61,7 @@
 		FA1DEA231BE392FD0055BF7A /* TeamMemberCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA1DEA221BE392FD0055BF7A /* TeamMemberCellView.m */; settings = {ASSET_TAGS = (); }; };
 		FA1DEA261BE3931B0055BF7A /* TeamNameReusuableView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA1DEA251BE3931B0055BF7A /* TeamNameReusuableView.m */; settings = {ASSET_TAGS = (); }; };
 		FA59C7AC1BE2847000A71FDD /* AddTeamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA59C7AB1BE2847000A71FDD /* AddTeamViewController.m */; settings = {ASSET_TAGS = (); }; };
+		FA74D5301BE4CD7100C59BAD /* HomeMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA74D52F1BE4CD7100C59BAD /* HomeMenuViewController.m */; settings = {ASSET_TAGS = (); }; };
 		FAB9AC401BE3A9AF0090FC1A /* TeamMemberCollectionCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAB9AC3F1BE3A9AF0090FC1A /* TeamMemberCollectionCellView.xib */; settings = {ASSET_TAGS = (); }; };
 		FAB9AC421BE3AC4B0090FC1A /* TeamNameReusuableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAB9AC411BE3AC4B0090FC1A /* TeamNameReusuableView.xib */; settings = {ASSET_TAGS = (); }; };
 		FAB9AC441BE3B9370090FC1A /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAB9AC431BE3B9370090FC1A /* AddressBookUI.framework */; };
@@ -152,6 +153,8 @@
 		FA1DEA251BE3931B0055BF7A /* TeamNameReusuableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TeamNameReusuableView.m; path = App/Src/TeamNameReusuableView.m; sourceTree = "<group>"; };
 		FA59C7AA1BE2847000A71FDD /* AddTeamViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddTeamViewController.h; path = App/Src/AddTeamViewController.h; sourceTree = "<group>"; };
 		FA59C7AB1BE2847000A71FDD /* AddTeamViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddTeamViewController.m; path = App/Src/AddTeamViewController.m; sourceTree = "<group>"; };
+		FA74D52E1BE4CD7100C59BAD /* HomeMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeMenuViewController.h; path = App/Src/HomeMenuViewController.h; sourceTree = "<group>"; };
+		FA74D52F1BE4CD7100C59BAD /* HomeMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeMenuViewController.m; path = App/Src/HomeMenuViewController.m; sourceTree = "<group>"; };
 		FAB9AC3F1BE3A9AF0090FC1A /* TeamMemberCollectionCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TeamMemberCollectionCellView.xib; path = App/Src/TeamMemberCollectionCellView.xib; sourceTree = "<group>"; };
 		FAB9AC411BE3AC4B0090FC1A /* TeamNameReusuableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TeamNameReusuableView.xib; path = App/Src/TeamNameReusuableView.xib; sourceTree = "<group>"; };
 		FAB9AC431BE3B9370090FC1A /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
@@ -248,6 +251,7 @@
 		6B281C291B6A7FDA002FCF4F /* App */ = {
 			isa = PBXGroup;
 			children = (
+				FA74D52D1BE4CD2300C59BAD /* Home Menu */,
 				FAB9AC491BE49FAD0090FC1A /* View Teams */,
 				FAB9AC451BE3D9130090FC1A /* Join Team */,
 				FA1DEA1A1BE3902B0055BF7A /* Team Profile */,
@@ -485,6 +489,15 @@
 			name = "Add New Team";
 			sourceTree = "<group>";
 		};
+		FA74D52D1BE4CD2300C59BAD /* Home Menu */ = {
+			isa = PBXGroup;
+			children = (
+				FA74D52E1BE4CD7100C59BAD /* HomeMenuViewController.h */,
+				FA74D52F1BE4CD7100C59BAD /* HomeMenuViewController.m */,
+			);
+			name = "Home Menu";
+			sourceTree = "<group>";
+		};
 		FAB9AC451BE3D9130090FC1A /* Join Team */ = {
 			isa = PBXGroup;
 			children = (
@@ -612,6 +625,7 @@
 				FAB9AC4C1BE4A0870090FC1A /* ViewTeamTVC.m in Sources */,
 				6B443C951B5E031B00406B17 /* MainViewController.m in Sources */,
 				661104591B87526700C8F1F4 /* UserIdentityViewController.m in Sources */,
+				FA74D5301BE4CD7100C59BAD /* HomeMenuViewController.m in Sources */,
 				CE9B0E871BB5E3ED0082D0CE /* UserDataStorageViewController.m in Sources */,
 				6B443C821B5DD72900406B17 /* AWSFacebookSignInProvider.m in Sources */,
 				6B8A6F441B616B260035EA74 /* AWSIdentityManager.m in Sources */,
