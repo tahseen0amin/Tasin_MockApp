@@ -1,22 +1,28 @@
 //
-//  JoinTeamTableViewController.m
+//  ViewTeamTVC.m
 //  TasinMockApp
 //
-//  Created by Taseen Amin on 30/10/2015.
+//  Created by Taseen Amin on 31/10/2015.
 //  Copyright © 2015 Amazon. All rights reserved.
 //
 
-#import "JoinTeamTableViewController.h"
+#import "ViewTeamTVC.h"
 #import "TeamCell.h"
 
-@interface JoinTeamTableViewController ()
+@interface ViewTeamTVC ()
 
 @end
 
-@implementation JoinTeamTableViewController
+@implementation ViewTeamTVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    // Uncomment the following line to preserve selection between presentations.
+    // self.clearsSelectionOnViewWillAppear = NO;
+    
+    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -27,7 +33,7 @@
 #pragma mark - Table view data source
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 5;
+    return 3;
 }
 
 
@@ -40,12 +46,13 @@
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    return @"Click on the team to join it";
+    return @"Click on the team to challenge them";
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
     return 40;
 }
+
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {

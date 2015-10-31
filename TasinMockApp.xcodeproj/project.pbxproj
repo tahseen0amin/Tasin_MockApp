@@ -65,6 +65,8 @@
 		FAB9AC421BE3AC4B0090FC1A /* TeamNameReusuableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAB9AC411BE3AC4B0090FC1A /* TeamNameReusuableView.xib */; settings = {ASSET_TAGS = (); }; };
 		FAB9AC441BE3B9370090FC1A /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAB9AC431BE3B9370090FC1A /* AddressBookUI.framework */; };
 		FAB9AC481BE3D9360090FC1A /* JoinTeamTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAB9AC471BE3D9360090FC1A /* JoinTeamTableViewController.m */; settings = {ASSET_TAGS = (); }; };
+		FAB9AC4C1BE4A0870090FC1A /* ViewTeamTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FAB9AC4B1BE4A0870090FC1A /* ViewTeamTVC.m */; settings = {ASSET_TAGS = (); }; };
+		FAB9AC4F1BE4A0EA0090FC1A /* TeamCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FAB9AC4E1BE4A0EA0090FC1A /* TeamCell.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -155,6 +157,10 @@
 		FAB9AC431BE3B9370090FC1A /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
 		FAB9AC461BE3D9360090FC1A /* JoinTeamTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JoinTeamTableViewController.h; path = App/Src/JoinTeamTableViewController.h; sourceTree = "<group>"; };
 		FAB9AC471BE3D9360090FC1A /* JoinTeamTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JoinTeamTableViewController.m; path = App/Src/JoinTeamTableViewController.m; sourceTree = "<group>"; };
+		FAB9AC4A1BE4A0870090FC1A /* ViewTeamTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewTeamTVC.h; path = App/Src/ViewTeamTVC.h; sourceTree = "<group>"; };
+		FAB9AC4B1BE4A0870090FC1A /* ViewTeamTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewTeamTVC.m; path = App/Src/ViewTeamTVC.m; sourceTree = "<group>"; };
+		FAB9AC4D1BE4A0EA0090FC1A /* TeamCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TeamCell.h; path = App/Src/TeamCell.h; sourceTree = "<group>"; };
+		FAB9AC4E1BE4A0EA0090FC1A /* TeamCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TeamCell.m; path = App/Src/TeamCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -242,6 +248,7 @@
 		6B281C291B6A7FDA002FCF4F /* App */ = {
 			isa = PBXGroup;
 			children = (
+				FAB9AC491BE49FAD0090FC1A /* View Teams */,
 				FAB9AC451BE3D9130090FC1A /* Join Team */,
 				FA1DEA1A1BE3902B0055BF7A /* Team Profile */,
 				FA59C7A91BE279AD00A71FDD /* Add New Team */,
@@ -487,6 +494,17 @@
 			name = "Join Team";
 			sourceTree = "<group>";
 		};
+		FAB9AC491BE49FAD0090FC1A /* View Teams */ = {
+			isa = PBXGroup;
+			children = (
+				FAB9AC4A1BE4A0870090FC1A /* ViewTeamTVC.h */,
+				FAB9AC4B1BE4A0870090FC1A /* ViewTeamTVC.m */,
+				FAB9AC4D1BE4A0EA0090FC1A /* TeamCell.h */,
+				FAB9AC4E1BE4A0EA0090FC1A /* TeamCell.m */,
+			);
+			name = "View Teams";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -591,6 +609,7 @@
 				CE9B0E841BB5DA0C0082D0CE /* UserFilesViewController.m in Sources */,
 				FAB9AC481BE3D9360090FC1A /* JoinTeamTableViewController.m in Sources */,
 				6611045C1B8756F500C8F1F4 /* DemoFeature.m in Sources */,
+				FAB9AC4C1BE4A0870090FC1A /* ViewTeamTVC.m in Sources */,
 				6B443C951B5E031B00406B17 /* MainViewController.m in Sources */,
 				661104591B87526700C8F1F4 /* UserIdentityViewController.m in Sources */,
 				CE9B0E871BB5E3ED0082D0CE /* UserDataStorageViewController.m in Sources */,
@@ -599,6 +618,7 @@
 				FA1DEA261BE3931B0055BF7A /* TeamNameReusuableView.m in Sources */,
 				CE4ADF3B1BAA221D004F5676 /* AWSContentManager.m in Sources */,
 				6B443C4F1B5DB06200406B17 /* main.m in Sources */,
+				FAB9AC4F1BE4A0EA0090FC1A /* TeamCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

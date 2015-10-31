@@ -100,6 +100,7 @@ static NSString * LOG_TAG = @"MainViewController";
         [self.locationManager requestAlwaysAuthorization];
     } else {
         // set up geo fence
+        [self setUpGeoFence];
     }
     [self.locationManager startUpdatingLocation];
 }
@@ -219,6 +220,8 @@ static NSString * LOG_TAG = @"MainViewController";
     
 }
 
+
+
 -(void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status {
     switch (status) {
         case kCLAuthorizationStatusAuthorizedAlways:
@@ -264,6 +267,17 @@ static NSString * LOG_TAG = @"MainViewController";
 
 - (void)showSorryAlert {
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Location Permission Denied" message:@"Sorry we won't be able to let you know correctly as you have disabled the location for this app. You can change it back in Settings" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *done = [UIAlertAction actionWithTitle:@"OK"
+                                                   style:UIAlertActionStyleCancel
+                                                 handler:nil];
+    [alertController addAction:done];
+    [self presentViewController:alertController animated:YES completion:nil];
+}
+
+- (void)showAlertWithTitle:(NSString *)title AndMessage:(NSString *)message {
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:title
+                                                                             message:message
+                                                                      preferredStyle:UIAlertControllerStyleAlert];
     UIAlertAction *done = [UIAlertAction actionWithTitle:@"OK"
                                                    style:UIAlertActionStyleCancel
                                                  handler:nil];

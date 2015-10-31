@@ -66,7 +66,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0lx-xM-3gj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1451" y="467"/>
+            <point key="canvasLocation" x="1453" y="468"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="OqL-az-x6G">
@@ -95,6 +95,9 @@
                                         <state key="normal" title="Here are others around you">
                                             <color key="titleColor" red="0.97254901959999995" green="0.96078431369999995" blue="0.94509803920000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="6ro-A1-qAw" kind="show" id="zBz-4T-WpO"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="16A-iQ-Ea2">
                                         <rect key="frame" x="55" y="100" width="210" height="50"/>
@@ -156,10 +159,82 @@
                             <constraint firstItem="E3U-aD-g0O" firstAttribute="centerY" secondItem="1O2-Ju-FMn" secondAttribute="centerY" id="Jxm-Ec-DBF"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="QsY-a3-1Gz"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4aP-Pi-QEP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2179" y="467"/>
+            <point key="canvasLocation" x="2991" y="467"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="2QV-sK-Lig">
+            <objects>
+                <tableViewController id="6ro-A1-qAw" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="150" sectionHeaderHeight="28" sectionFooterHeight="28" id="7TW-MB-17C">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TeamCell" id="P6l-no-iLs" customClass="TeamCell">
+                                <rect key="frame" x="0.0" y="92" width="600" height="150"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="P6l-no-iLs" id="1Ij-wz-OjB">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="149"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZJb-jQ-Vbj">
+                                            <rect key="frame" x="0.0" y="114" width="600" height="35"/>
+                                            <animations/>
+                                            <color key="backgroundColor" red="0.55294117649999996" green="0.71372549019999998" blue="0.16078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="35" id="RX9-6J-f13"/>
+                                            </constraints>
+                                        </view>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Team Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lX8-dK-fSF">
+                                            <rect key="frame" x="8" y="114" width="584" height="35"/>
+                                            <animations/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="35" id="RYm-av-rGY"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="17"/>
+                                            <color key="textColor" red="1" green="0.99607843139999996" blue="0.99607843139999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CustomEvent" translatesAutoresizingMaskIntoConstraints="NO" id="g5A-NK-CAn">
+                                            <rect key="frame" x="8" y="8" width="584" height="133"/>
+                                            <animations/>
+                                        </imageView>
+                                    </subviews>
+                                    <animations/>
+                                    <constraints>
+                                        <constraint firstItem="g5A-NK-CAn" firstAttribute="leading" secondItem="1Ij-wz-OjB" secondAttribute="leadingMargin" id="9Wv-YO-Iyo"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="g5A-NK-CAn" secondAttribute="bottom" id="Jtc-0x-FbJ"/>
+                                        <constraint firstItem="g5A-NK-CAn" firstAttribute="top" secondItem="1Ij-wz-OjB" secondAttribute="topMargin" id="PxG-z0-ccI"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="lX8-dK-fSF" secondAttribute="bottom" constant="-8" id="bRC-yr-ipZ"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="g5A-NK-CAn" secondAttribute="trailing" id="dA9-X3-i2T"/>
+                                        <constraint firstItem="ZJb-jQ-Vbj" firstAttribute="leading" secondItem="1Ij-wz-OjB" secondAttribute="leadingMargin" constant="-8" id="jHU-wL-Qq7"/>
+                                        <constraint firstItem="lX8-dK-fSF" firstAttribute="leading" secondItem="1Ij-wz-OjB" secondAttribute="leadingMargin" id="nDs-r0-xUd"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="ZJb-jQ-Vbj" secondAttribute="trailing" constant="-8" id="nij-C6-uFx"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="ZJb-jQ-Vbj" secondAttribute="bottom" constant="-8" id="xts-4p-hko"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="lX8-dK-fSF" secondAttribute="trailing" id="ztJ-so-yPg"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <animations/>
+                                <connections>
+                                    <outlet property="teamName" destination="lX8-dK-fSF" id="fk0-Ed-xat"/>
+                                    <outlet property="teamProfilePic" destination="g5A-NK-CAn" id="j8E-b4-q2S"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="6ro-A1-qAw" id="jHi-lY-hvN"/>
+                            <outlet property="delegate" destination="6ro-A1-qAw" id="ChK-LJ-EEl"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="spx-uE-560" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3799" y="-78"/>
         </scene>
         <!--Add New Team-->
         <scene sceneID="c6W-4b-ubA">
@@ -241,7 +316,7 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TeamCell" rowHeight="150" id="Vjn-06-WsM">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TeamCell" rowHeight="150" id="Vjn-06-WsM" customClass="TeamCell">
                                 <rect key="frame" x="0.0" y="28" width="600" height="150"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Vjn-06-WsM" id="kCj-Dt-8cG">
@@ -287,6 +362,10 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <animations/>
+                                <connections>
+                                    <outlet property="teamName" destination="ilI-M0-adA" id="ByX-sA-3wM"/>
+                                    <outlet property="teamProfilePic" destination="qcC-fe-A9w" id="9HJ-3C-amP"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -324,8 +403,28 @@
             </objects>
             <point key="canvasLocation" x="665.625" y="467.95774647887322"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="l5S-9l-HhC">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="GWE-2C-s9d" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="GXF-xi-NvT">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ZhM-Gd-zsb" kind="relationship" relationship="rootViewController" id="Nb4-Ey-XfI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nRS-Cp-BdM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2179" y="467"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="CustomEvent" width="150" height="150"/>
         <image name="FacebookButton" width="240" height="37"/>
         <image name="UserIdentityIcon" width="50" height="50"/>
     </resources>
