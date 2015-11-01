@@ -15,7 +15,3 @@
 @interface MainViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate, CLLocationManagerDelegate>
 
 @end
-
-@interface FeatureDescriptionViewController : UIViewController
-
-@end

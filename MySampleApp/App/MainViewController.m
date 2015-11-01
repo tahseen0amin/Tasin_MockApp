@@ -156,6 +156,10 @@ static NSString * LOG_TAG = @"MainViewController";
     return [NSString stringWithFormat:@"  Logged in as : %@",[[AWSIdentityManager sharedInstance] userName]];
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    return 50;
+}
+
 #pragma mark -
 
 - (void)updateTheme {
@@ -275,16 +279,3 @@ static NSString * LOG_TAG = @"MainViewController";
 }
 @end
 
-@implementation FeatureDescriptionViewController
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-
-    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back"
-                                                                             style:UIBarButtonItemStylePlain
-                                                                            target:nil
-                                                                            action:nil];
-}
-
-
-@end

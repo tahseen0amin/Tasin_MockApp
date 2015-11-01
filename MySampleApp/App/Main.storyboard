@@ -10,22 +10,22 @@
         <scene sceneID="zBM-Ku-UbQ">
             <objects>
                 <tableViewController storyboardIdentifier="Main" title="My Sample App" id="HKv-yk-r7M" customClass="MainViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" sectionHeaderHeight="22" sectionFooterHeight="22" id="3oO-xQ-WqP">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="22" sectionFooterHeight="22" id="3oO-xQ-WqP">
                         <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="MainViewCell" textLabel="zpY-G2-uld" detailTextLabel="eUd-wN-qWa" imageView="V4l-Qt-w4S" rowHeight="60" style="IBUITableViewCellStyleSubtitle" id="eiN-nn-4Ng">
-                                <rect key="frame" x="0.0" y="22" width="600" height="60"/>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="MainViewCell" textLabel="zpY-G2-uld" detailTextLabel="eUd-wN-qWa" imageView="V4l-Qt-w4S" rowHeight="100" style="IBUITableViewCellStyleSubtitle" id="eiN-nn-4Ng">
+                                <rect key="frame" x="0.0" y="22" width="600" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eiN-nn-4Ng" id="NeQ-VR-mWV">
-                                    <rect key="frame" x="0.0" y="0.0" width="567" height="59"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="567" height="99"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" id="zpY-G2-uld">
-                                            <rect key="frame" x="80" y="13" width="34" height="20"/>
+                                            <rect key="frame" x="80" y="33" width="34" height="20"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
@@ -33,7 +33,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" id="eUd-wN-qWa">
-                                            <rect key="frame" x="80" y="33" width="41" height="14"/>
+                                            <rect key="frame" x="80" y="53" width="41" height="14"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
@@ -41,7 +41,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="UserIdentityIcon" id="V4l-Qt-w4S">
-                                            <rect key="frame" x="15" y="4" width="50" height="50"/>
+                                            <rect key="frame" x="15" y="24" width="50" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <animations/>
                                         </imageView>
@@ -163,6 +163,38 @@
             </objects>
             <point key="canvasLocation" x="2990" y="459"/>
         </scene>
+        <!--Challenges View Controller-->
+        <scene sceneID="U8N-Yh-eRX">
+            <objects>
+                <viewController id="MQK-Pt-ZcX" customClass="ChallengesViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="FPz-ud-hbg"/>
+                        <viewControllerLayoutGuide type="bottom" id="7Lm-7L-N67"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="slg-xE-9Fn">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No More Challenges to show" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rv8-Ue-sIX">
+                                <rect key="frame" x="159" y="290" width="282" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="18"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="rv8-Ue-sIX" firstAttribute="centerY" secondItem="slg-xE-9Fn" secondAttribute="centerY" id="QwL-71-M8E"/>
+                            <constraint firstItem="rv8-Ue-sIX" firstAttribute="centerX" secondItem="slg-xE-9Fn" secondAttribute="centerX" id="ilw-NK-uZ9"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PVc-f6-9hD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3775" y="761"/>
+        </scene>
         <!--View TeamTVC-->
         <scene sceneID="2QV-sK-Lig">
             <objects>
@@ -229,10 +261,13 @@
                             <outlet property="delegate" destination="6ro-A1-qAw" id="ChK-LJ-EEl"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <segue destination="MQK-Pt-ZcX" kind="show" identifier="ShowChallenges" id="FOY-UV-llB"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="spx-uE-560" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3799" y="-78"/>
+            <point key="canvasLocation" x="3771" y="-138"/>
         </scene>
         <!--Add New Team-->
         <scene sceneID="c6W-4b-ubA">
@@ -401,10 +436,10 @@
             </objects>
             <point key="canvasLocation" x="665.625" y="467.95774647887322"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Home Menu Navigation Controller-->
         <scene sceneID="l5S-9l-HhC">
             <objects>
-                <navigationController storyboardIdentifier="HomeNavigation" automaticallyAdjustsScrollViewInsets="NO" id="GWE-2C-s9d" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="HomeNavigation" automaticallyAdjustsScrollViewInsets="NO" id="GWE-2C-s9d" customClass="HomeMenuNavigationController" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="GXF-xi-NvT">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>

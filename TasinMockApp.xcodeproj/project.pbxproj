@@ -61,7 +61,12 @@
 		FA1DEA231BE392FD0055BF7A /* TeamMemberCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA1DEA221BE392FD0055BF7A /* TeamMemberCellView.m */; settings = {ASSET_TAGS = (); }; };
 		FA1DEA261BE3931B0055BF7A /* TeamNameReusuableView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA1DEA251BE3931B0055BF7A /* TeamNameReusuableView.m */; settings = {ASSET_TAGS = (); }; };
 		FA59C7AC1BE2847000A71FDD /* AddTeamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA59C7AB1BE2847000A71FDD /* AddTeamViewController.m */; settings = {ASSET_TAGS = (); }; };
+		FA60A8AD1BE570D5000054D9 /* HomeMenuNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA60A8AC1BE570D5000054D9 /* HomeMenuNavigationController.m */; settings = {ASSET_TAGS = (); }; };
 		FA74D5301BE4CD7100C59BAD /* HomeMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA74D52F1BE4CD7100C59BAD /* HomeMenuViewController.m */; settings = {ASSET_TAGS = (); }; };
+		FA7EA25A1BE52C0400BFAFFE /* DraggableViewBackground.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7EA2551BE52C0400BFAFFE /* DraggableViewBackground.m */; settings = {ASSET_TAGS = (); }; };
+		FA7EA25B1BE52C0400BFAFFE /* DraggableView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7EA2571BE52C0400BFAFFE /* DraggableView.m */; settings = {ASSET_TAGS = (); }; };
+		FA7EA25C1BE52C0400BFAFFE /* OverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7EA2591BE52C0400BFAFFE /* OverlayView.m */; settings = {ASSET_TAGS = (); }; };
+		FA7EA25F1BE52F6800BFAFFE /* ChallengesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7EA25E1BE52F6800BFAFFE /* ChallengesViewController.m */; settings = {ASSET_TAGS = (); }; };
 		FAB9AC401BE3A9AF0090FC1A /* TeamMemberCollectionCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAB9AC3F1BE3A9AF0090FC1A /* TeamMemberCollectionCellView.xib */; settings = {ASSET_TAGS = (); }; };
 		FAB9AC421BE3AC4B0090FC1A /* TeamNameReusuableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAB9AC411BE3AC4B0090FC1A /* TeamNameReusuableView.xib */; settings = {ASSET_TAGS = (); }; };
 		FAB9AC441BE3B9370090FC1A /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAB9AC431BE3B9370090FC1A /* AddressBookUI.framework */; };
@@ -153,8 +158,18 @@
 		FA1DEA251BE3931B0055BF7A /* TeamNameReusuableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TeamNameReusuableView.m; path = App/Src/TeamNameReusuableView.m; sourceTree = "<group>"; };
 		FA59C7AA1BE2847000A71FDD /* AddTeamViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddTeamViewController.h; path = App/Src/AddTeamViewController.h; sourceTree = "<group>"; };
 		FA59C7AB1BE2847000A71FDD /* AddTeamViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddTeamViewController.m; path = App/Src/AddTeamViewController.m; sourceTree = "<group>"; };
+		FA60A8AB1BE570D5000054D9 /* HomeMenuNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeMenuNavigationController.h; path = App/Src/HomeMenuNavigationController.h; sourceTree = "<group>"; };
+		FA60A8AC1BE570D5000054D9 /* HomeMenuNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeMenuNavigationController.m; path = App/Src/HomeMenuNavigationController.m; sourceTree = "<group>"; };
 		FA74D52E1BE4CD7100C59BAD /* HomeMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeMenuViewController.h; path = App/Src/HomeMenuViewController.h; sourceTree = "<group>"; };
 		FA74D52F1BE4CD7100C59BAD /* HomeMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeMenuViewController.m; path = App/Src/HomeMenuViewController.m; sourceTree = "<group>"; };
+		FA7EA2541BE52C0400BFAFFE /* DraggableViewBackground.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DraggableViewBackground.h; sourceTree = "<group>"; };
+		FA7EA2551BE52C0400BFAFFE /* DraggableViewBackground.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DraggableViewBackground.m; sourceTree = "<group>"; };
+		FA7EA2561BE52C0400BFAFFE /* DraggableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DraggableView.h; sourceTree = "<group>"; };
+		FA7EA2571BE52C0400BFAFFE /* DraggableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DraggableView.m; sourceTree = "<group>"; };
+		FA7EA2581BE52C0400BFAFFE /* OverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OverlayView.h; sourceTree = "<group>"; };
+		FA7EA2591BE52C0400BFAFFE /* OverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OverlayView.m; sourceTree = "<group>"; };
+		FA7EA25D1BE52F6800BFAFFE /* ChallengesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChallengesViewController.h; path = App/Src/ChallengesViewController.h; sourceTree = "<group>"; };
+		FA7EA25E1BE52F6800BFAFFE /* ChallengesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChallengesViewController.m; path = App/Src/ChallengesViewController.m; sourceTree = "<group>"; };
 		FAB9AC3F1BE3A9AF0090FC1A /* TeamMemberCollectionCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TeamMemberCollectionCellView.xib; path = App/Src/TeamMemberCollectionCellView.xib; sourceTree = "<group>"; };
 		FAB9AC411BE3AC4B0090FC1A /* TeamNameReusuableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TeamNameReusuableView.xib; path = App/Src/TeamNameReusuableView.xib; sourceTree = "<group>"; };
 		FAB9AC431BE3B9370090FC1A /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
@@ -251,6 +266,7 @@
 		6B281C291B6A7FDA002FCF4F /* App */ = {
 			isa = PBXGroup;
 			children = (
+				FA7EA2531BE52B7C00BFAFFE /* Challenges */,
 				FA74D52D1BE4CD2300C59BAD /* Home Menu */,
 				FAB9AC491BE49FAD0090FC1A /* View Teams */,
 				FAB9AC451BE3D9130090FC1A /* Join Team */,
@@ -494,8 +510,25 @@
 			children = (
 				FA74D52E1BE4CD7100C59BAD /* HomeMenuViewController.h */,
 				FA74D52F1BE4CD7100C59BAD /* HomeMenuViewController.m */,
+				FA60A8AB1BE570D5000054D9 /* HomeMenuNavigationController.h */,
+				FA60A8AC1BE570D5000054D9 /* HomeMenuNavigationController.m */,
 			);
 			name = "Home Menu";
+			sourceTree = "<group>";
+		};
+		FA7EA2531BE52B7C00BFAFFE /* Challenges */ = {
+			isa = PBXGroup;
+			children = (
+				FA7EA2541BE52C0400BFAFFE /* DraggableViewBackground.h */,
+				FA7EA2551BE52C0400BFAFFE /* DraggableViewBackground.m */,
+				FA7EA2561BE52C0400BFAFFE /* DraggableView.h */,
+				FA7EA2571BE52C0400BFAFFE /* DraggableView.m */,
+				FA7EA2581BE52C0400BFAFFE /* OverlayView.h */,
+				FA7EA2591BE52C0400BFAFFE /* OverlayView.m */,
+				FA7EA25D1BE52F6800BFAFFE /* ChallengesViewController.h */,
+				FA7EA25E1BE52F6800BFAFFE /* ChallengesViewController.m */,
+			);
+			name = Challenges;
 			sourceTree = "<group>";
 		};
 		FAB9AC451BE3D9130090FC1A /* Join Team */ = {
@@ -615,21 +648,26 @@
 				6605EA8A1BD7E557005A5016 /* PushReceiver.m in Sources */,
 				FA1DEA231BE392FD0055BF7A /* TeamMemberCellView.m in Sources */,
 				CEA68A821B87E8E200744C02 /* AWSPushManager.m in Sources */,
+				FA7EA25F1BE52F6800BFAFFE /* ChallengesViewController.m in Sources */,
 				6BB938931BAC68A200C527A0 /* PushNotificationViewController.m in Sources */,
 				6699C6511BBAF90B00436B45 /* UserSettingsViewController.m in Sources */,
 				6B443C521B5DB06200406B17 /* AppDelegate.m in Sources */,
+				FA60A8AD1BE570D5000054D9 /* HomeMenuNavigationController.m in Sources */,
 				6B443C771B5DB22500406B17 /* AWSMobileClient.m in Sources */,
 				CE9B0E841BB5DA0C0082D0CE /* UserFilesViewController.m in Sources */,
 				FAB9AC481BE3D9360090FC1A /* JoinTeamTableViewController.m in Sources */,
 				6611045C1B8756F500C8F1F4 /* DemoFeature.m in Sources */,
 				FAB9AC4C1BE4A0870090FC1A /* ViewTeamTVC.m in Sources */,
+				FA7EA25C1BE52C0400BFAFFE /* OverlayView.m in Sources */,
 				6B443C951B5E031B00406B17 /* MainViewController.m in Sources */,
 				661104591B87526700C8F1F4 /* UserIdentityViewController.m in Sources */,
 				FA74D5301BE4CD7100C59BAD /* HomeMenuViewController.m in Sources */,
 				CE9B0E871BB5E3ED0082D0CE /* UserDataStorageViewController.m in Sources */,
 				6B443C821B5DD72900406B17 /* AWSFacebookSignInProvider.m in Sources */,
 				6B8A6F441B616B260035EA74 /* AWSIdentityManager.m in Sources */,
+				FA7EA25B1BE52C0400BFAFFE /* DraggableView.m in Sources */,
 				FA1DEA261BE3931B0055BF7A /* TeamNameReusuableView.m in Sources */,
+				FA7EA25A1BE52C0400BFAFFE /* DraggableViewBackground.m in Sources */,
 				CE4ADF3B1BAA221D004F5676 /* AWSContentManager.m in Sources */,
 				6B443C4F1B5DB06200406B17 /* main.m in Sources */,
 				FAB9AC4F1BE4A0EA0090FC1A /* TeamCell.m in Sources */,

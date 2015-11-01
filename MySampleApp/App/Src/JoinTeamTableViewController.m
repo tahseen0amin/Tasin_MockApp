@@ -8,6 +8,7 @@
 
 #import "JoinTeamTableViewController.h"
 #import "TeamCell.h"
+#import "TeamProfileCollectionViewController.h"
 
 @interface JoinTeamTableViewController ()
 
@@ -45,6 +46,13 @@
 
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
     return 40;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    TeamProfileCollectionViewController *nextCo = [[TeamProfileCollectionViewController alloc] initWithNibName:@"TeamProfileCollectionViewController" bundle:nil];
+    UINavigationController *cont = [[UINavigationController alloc] initWithRootViewController:nextCo];
+    [self presentViewController:cont animated:YES completion:nil];
 }
 /*
 // Override to support conditional editing of the table view.

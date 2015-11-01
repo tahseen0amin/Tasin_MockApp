@@ -1,5 +1,5 @@
 //
-//  HomeMenuViewController.h
+//  ChallengesViewController.h
 //  TasinMockApp
 //
 //  Created by Taseen Amin on 31/10/2015.
@@ -7,8 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-@import CoreLocation;
 
-@interface HomeMenuViewController : UIViewController<CLLocationManagerDelegate>
+@interface ChallengesViewController : UIViewController
 
 @end

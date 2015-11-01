@@ -9,6 +9,7 @@
 #import "TeamProfileCollectionViewController.h"
 #import "TeamMemberCellView.h"
 #import "TeamNameReusuableView.h"
+#import "HomeMenuNavigationController.h"
 @import AddressBookUI;
 @import MessageUI;
 
@@ -44,12 +45,18 @@ static NSString * const reuseIdentifierForHeader = @"HeaderCell";
 }
 
 - (void)homeButtonClicked{
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main"
-                                                         bundle:nil];
-    UINavigationController *navController = [storyboard instantiateViewControllerWithIdentifier:@"HomeNavigation"];
     
-    [self presentViewController:navController animated:YES completion:nil];
+    if ([self.navigationController isKindOfClass:[HomeMenuNavigationController class]]) {
+        [self.navigationController popViewControllerAnimated:YES];
+    } else {
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main"
+                                                             bundle:nil];
+        UINavigationController *navController = [storyboard instantiateViewControllerWithIdentifier:@"HomeNavigation"];
+        
+        [self presentViewController:navController animated:YES completion:nil];
 
+    }
+   
 }
 
 - (void)didReceiveMemoryWarning {
