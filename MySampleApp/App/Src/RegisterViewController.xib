@@ -13,6 +13,7 @@
             <string>Montserrat-Regular</string>
             <string>Montserrat-Regular</string>
             <string>Montserrat-Regular</string>
+            <string>Montserrat-Regular</string>
         </mutableArray>
     </customFonts>
     <objects>
@@ -40,7 +41,7 @@
                                 <constraint firstAttribute="height" constant="30" id="o4Z-1H-D0f"/>
                             </constraints>
                             <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="14"/>
-                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ijg-mz-uSQ">
@@ -71,7 +72,7 @@
                                 <constraint firstAttribute="width" constant="90" id="zc9-95-KVU"/>
                             </constraints>
                             <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="14"/>
-                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U22-8P-O01">
@@ -102,7 +103,7 @@
                                 <constraint firstAttribute="height" constant="30" id="fz5-kU-mt4"/>
                             </constraints>
                             <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="14"/>
-                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cCq-ak-fDo">
@@ -141,6 +142,19 @@
                                 <action selector="signUpClicked:" destination="-1" eventType="touchUpInside" id="GFH-ns-wu4"/>
                             </connections>
                         </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oAt-oL-nFe">
+                            <rect key="frame" x="254" y="205" width="46" height="30"/>
+                            <animations/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="46" id="Abw-9h-EIw"/>
+                                <constraint firstAttribute="height" constant="30" id="agB-fj-Yvg"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="12"/>
+                            <state key="normal" title="Cancel"/>
+                            <connections>
+                                <action selector="cancelClicked:" destination="-1" eventType="touchUpInside" id="QEN-EF-5gt"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <animations/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -159,6 +173,8 @@
                         <constraint firstItem="U22-8P-O01" firstAttribute="trailing" secondItem="ijg-mz-uSQ" secondAttribute="trailing" id="Isj-D4-ydg"/>
                         <constraint firstItem="Djk-uc-nzI" firstAttribute="centerY" secondItem="KfR-Bx-pAw" secondAttribute="centerY" id="KOv-a9-nIO"/>
                         <constraint firstAttribute="height" constant="235" id="KQV-FK-JiZ"/>
+                        <constraint firstAttribute="bottom" secondItem="oAt-oL-nFe" secondAttribute="bottom" id="KVa-1h-Rs2"/>
+                        <constraint firstAttribute="trailing" secondItem="oAt-oL-nFe" secondAttribute="trailing" id="PkG-xq-2h5"/>
                         <constraint firstItem="k73-sl-wDW" firstAttribute="centerY" secondItem="cpj-HE-P5n" secondAttribute="centerY" id="UlN-7u-dsf"/>
                         <constraint firstItem="ijg-mz-uSQ" firstAttribute="centerY" secondItem="Bok-gf-uj7" secondAttribute="centerY" id="bEA-wH-rAh"/>
                         <constraint firstItem="Bok-gf-uj7" firstAttribute="leading" secondItem="OcA-sF-wXI" secondAttribute="leading" constant="8" id="enR-Qy-Ngl"/>

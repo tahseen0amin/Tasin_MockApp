@@ -16,6 +16,7 @@
 #import <AWSCore/AWSCore.h>
 #import "AWSIdentityManager.h"
 #import "ApiHelper.h"
+#import "RegisterViewController.h"
 
 
 static NSString *LOG_TAG;
@@ -72,15 +73,21 @@ static NSString *LOG_TAG;
         [self.customProviderButton addTarget:self
                                       action:@selector(handleCustomLogin)
                             forControlEvents:UIControlEventTouchUpInside];
-        [self.customCreateAccountButton addTarget:self
-                                           action:@selector(SegueToRegister)
-                                 forControlEvents:UIControlEventTouchUpInside];
+    
         [self.customForgotPasswordButton addTarget:self
                                             action:@selector(showDemoAlert)
                                   forControlEvents:UIControlEventTouchUpInside];
 
         [self.customProviderButton setImage:[UIImage imageNamed:@"LoginButton"]
                                    forState:UIControlStateNormal];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    if ([defaults objectForKey:@"registered"]) {
+        [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
+        [defaults removeObjectForKey:@"registered"];
+    }
 }
 
 - (void)dealloc {
@@ -148,14 +155,18 @@ static NSString *LOG_TAG;
     }];
 }
 
+- (IBAction)CreateNewAccount:(UIButton *)sender {
+    [self SegueToRegister];
+}
 
-- (void)SegueToRegister{
-    
+- (void)SegueToRegister {
+    RegisterViewController *registerCont = [[RegisterViewController alloc] initWithNibName:nil bundle:nil];
+    [self presentViewController:registerCont animated:YES completion:nil];
 }
 
 - (void)showDemoAlert {
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle:NSLocalizedString(@"Custom Sign-In Demo", @"Label for custom sign-in dialog.")
-                                                                             message:NSLocalizedString(@"This is just a demo of custom sign-in.", @"Sign-in message structure for custom sign-in stub.")
+                                                                             message:NSLocalizedString(@"This feature do not work yet.", @"Sign-in message structure for custom sign-in stub.")
                                                                       preferredStyle:UIAlertControllerStyleAlert];
     UIAlertAction *doneAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"Done", @"Label to complete stubbed custom sign-in.")
                                                          style:UIAlertActionStyleCancel

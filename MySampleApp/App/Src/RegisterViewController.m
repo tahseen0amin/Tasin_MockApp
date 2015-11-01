@@ -25,16 +25,67 @@
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)signUpClicked:(id)sender {
-    
+    if ([self checkForEmpty:self.fullNameTF] && [self checkForEmpty:self.emailTF] && [self checkForEmpty:self.passwordTF]) {
+        NSString *data = [NSString stringWithFormat:@"name=%@&email=%@&pass=%@",self.fullNameTF.text,self.emailTF.text,self.passwordTF.text];
+        NSString *url = [NSString stringWithFormat:@"%@",data];
+        [ApiHelper connectionWithUrl:url PostString:nil
+                          HttpMethod:@"GET"
+                             success:^(NSData *data, NSURLResponse *response) {
+                                 NSError *error;
+                                 NSDictionary *APIResponseDictionary = data ? [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers | NSJSONReadingMutableLeaves error:&error]:nil;
+                                 if(error){
+                                     [self showErrorDialog:nil withMessage:@"wrong response"];
+                                 } else {
+                                     
+                                     // check for success key
+                                     NSLog(@"%@", APIResponseDictionary);
+                                     //
+                                     [self.parentViewController dismissViewControllerAnimated:YES
+                                                                                   completion:nil];
+                                 }
+                             }
+                             failure:^(NSData *data, NSError *connectionError) {
+                                 [self showErrorDialog:@"Error" withMessage:@"couldn't connect"];
+                             }];
+    } else {
+        [self showErrorDialog:@"Incomplete Form" withMessage:@"Please fill out entire form"];
+    }
 }
 
--(void)
+- (IBAction)cancelClicked:(id)sender {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:[NSNumber numberWithBool:YES] forKey:@"registered"];
+     [defaults synchronize];
+    [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (BOOL)checkForEmpty:(UITextField *)tf {
+    if (tf.text.length > 0) {
+        return YES;
+    } else {
+        return NO;
+    }
+}
 
 -(BOOL)textFieldShouldReturn:(UITextField *)textField {
     [textField resignFirstResponder];
     return YES;
 }
 
+- (void)showErrorDialog:(NSString *)title withMessage:(NSString *)message {
+    
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:NSLocalizedString(title, @"Sign-in error for sign-in failure.")
+                                                                             message:NSLocalizedString(message, @"Sign-in message structure for sign-in failure.")
+                                                                      preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *doneAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"Cancel", @"Label to cancel sign-in failure.")
+                                                         style:UIAlertActionStyleCancel
+                                                       handler:nil];
+    [alertController addAction:doneAction];
+    
+    [self presentViewController:alertController
+                       animated:YES
+                     completion:nil];
+}
 /*
 #pragma mark - Navigation
 

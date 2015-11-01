@@ -55,7 +55,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="handleCustomLogin" destination="zFR-uy-L27" eventType="touchUpInside" id="Evm-W6-BZr"/>
+                                    <action selector="CreateNewAccount:" destination="zFR-uy-L27" eventType="touchUpInside" id="Umz-QK-6ci"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="So3-eD-i8k">
@@ -105,9 +105,6 @@
                                 <state key="normal" title="Forgot your password?">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <action selector="handleCustomLogin" destination="zFR-uy-L27" eventType="touchUpInside" id="I7J-qE-wgw"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ER-3W-z3p">
                                 <rect key="frame" x="285" y="206" width="30" height="34"/>
