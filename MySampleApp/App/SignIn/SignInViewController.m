@@ -15,6 +15,8 @@
 #import "SignInViewController.h"
 #import <AWSCore/AWSCore.h>
 #import "AWSIdentityManager.h"
+#import "ApiHelper.h"
+
 
 static NSString *LOG_TAG;
 
@@ -71,10 +73,10 @@ static NSString *LOG_TAG;
                                       action:@selector(handleCustomLogin)
                             forControlEvents:UIControlEventTouchUpInside];
         [self.customCreateAccountButton addTarget:self
-                                           action:@selector(handleCustomLogin)
+                                           action:@selector(SegueToRegister)
                                  forControlEvents:UIControlEventTouchUpInside];
         [self.customForgotPasswordButton addTarget:self
-                                            action:@selector(handleCustomLogin)
+                                            action:@selector(showDemoAlert)
                                   forControlEvents:UIControlEventTouchUpInside];
 
         [self.customProviderButton setImage:[UIImage imageNamed:@"LoginButton"]
@@ -122,6 +124,13 @@ static NSString *LOG_TAG;
     [self handleLoginWithSignInProvider:AWSSignInProviderTypeFacebook];
 }
 - (void)handleCustomLogin {
+}
+
+- (void)SegueToRegister{
+    
+}
+
+- (void)showDemoAlert {
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle:NSLocalizedString(@"Custom Sign-In Demo", @"Label for custom sign-in dialog.")
                                                                              message:NSLocalizedString(@"This is just a demo of custom sign-in.", @"Sign-in message structure for custom sign-in stub.")
                                                                       preferredStyle:UIAlertControllerStyleAlert];

@@ -64,9 +64,7 @@ static NSString * const reuseIdentifierForHeader = @"HeaderCell";
     // Dispose of any resources that can be recreated.
 }
 
--(void)viewDidAppear:(BOOL)animated {
-    
-}
+
 /*
 #pragma mark - Navigation
 
@@ -137,6 +135,7 @@ static NSString * const reuseIdentifierForHeader = @"HeaderCell";
         }];
         NSLog(@"Email was selected");
     }
+    
 }
 
 - (void)sendSMStoNumber:(NSString *)number {

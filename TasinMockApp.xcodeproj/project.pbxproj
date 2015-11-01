@@ -62,6 +62,10 @@
 		FA1DEA261BE3931B0055BF7A /* TeamNameReusuableView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA1DEA251BE3931B0055BF7A /* TeamNameReusuableView.m */; settings = {ASSET_TAGS = (); }; };
 		FA59C7AC1BE2847000A71FDD /* AddTeamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA59C7AB1BE2847000A71FDD /* AddTeamViewController.m */; settings = {ASSET_TAGS = (); }; };
 		FA60A8AD1BE570D5000054D9 /* HomeMenuNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA60A8AC1BE570D5000054D9 /* HomeMenuNavigationController.m */; settings = {ASSET_TAGS = (); }; };
+		FA60A8B81BE5DCA4000054D9 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = FA60A8B11BE5DCA4000054D9 /* MBProgressHUD.m */; settings = {ASSET_TAGS = (); }; };
+		FA60A8B91BE5DCA4000054D9 /* GradientTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA60A8B31BE5DCA4000054D9 /* GradientTextView.m */; settings = {ASSET_TAGS = (); }; };
+		FA60A8BA1BE5DCA4000054D9 /* GradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA60A8B51BE5DCA4000054D9 /* GradientView.m */; settings = {ASSET_TAGS = (); }; };
+		FA60A8BB1BE5DCA4000054D9 /* ApiHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = FA60A8B71BE5DCA4000054D9 /* ApiHelper.m */; settings = {ASSET_TAGS = (); }; };
 		FA74D5301BE4CD7100C59BAD /* HomeMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA74D52F1BE4CD7100C59BAD /* HomeMenuViewController.m */; settings = {ASSET_TAGS = (); }; };
 		FA7EA25A1BE52C0400BFAFFE /* DraggableViewBackground.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7EA2551BE52C0400BFAFFE /* DraggableViewBackground.m */; settings = {ASSET_TAGS = (); }; };
 		FA7EA25B1BE52C0400BFAFFE /* DraggableView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7EA2571BE52C0400BFAFFE /* DraggableView.m */; settings = {ASSET_TAGS = (); }; };
@@ -160,6 +164,14 @@
 		FA59C7AB1BE2847000A71FDD /* AddTeamViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddTeamViewController.m; path = App/Src/AddTeamViewController.m; sourceTree = "<group>"; };
 		FA60A8AB1BE570D5000054D9 /* HomeMenuNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeMenuNavigationController.h; path = App/Src/HomeMenuNavigationController.h; sourceTree = "<group>"; };
 		FA60A8AC1BE570D5000054D9 /* HomeMenuNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeMenuNavigationController.m; path = App/Src/HomeMenuNavigationController.m; sourceTree = "<group>"; };
+		FA60A8B01BE5DCA4000054D9 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		FA60A8B11BE5DCA4000054D9 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		FA60A8B21BE5DCA4000054D9 /* GradientTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GradientTextView.h; sourceTree = "<group>"; };
+		FA60A8B31BE5DCA4000054D9 /* GradientTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GradientTextView.m; sourceTree = "<group>"; };
+		FA60A8B41BE5DCA4000054D9 /* GradientView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GradientView.h; sourceTree = "<group>"; };
+		FA60A8B51BE5DCA4000054D9 /* GradientView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GradientView.m; sourceTree = "<group>"; };
+		FA60A8B61BE5DCA4000054D9 /* ApiHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApiHelper.h; sourceTree = "<group>"; };
+		FA60A8B71BE5DCA4000054D9 /* ApiHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApiHelper.m; sourceTree = "<group>"; };
 		FA74D52E1BE4CD7100C59BAD /* HomeMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeMenuViewController.h; path = App/Src/HomeMenuViewController.h; sourceTree = "<group>"; };
 		FA74D52F1BE4CD7100C59BAD /* HomeMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeMenuViewController.m; path = App/Src/HomeMenuViewController.m; sourceTree = "<group>"; };
 		FA7EA2541BE52C0400BFAFFE /* DraggableViewBackground.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DraggableViewBackground.h; sourceTree = "<group>"; };
@@ -266,12 +278,14 @@
 		6B281C291B6A7FDA002FCF4F /* App */ = {
 			isa = PBXGroup;
 			children = (
+				FA60A8AF1BE5DC98000054D9 /* Helper */,
 				FA7EA2531BE52B7C00BFAFFE /* Challenges */,
 				FA74D52D1BE4CD2300C59BAD /* Home Menu */,
 				FAB9AC491BE49FAD0090FC1A /* View Teams */,
 				FAB9AC451BE3D9130090FC1A /* Join Team */,
 				FA1DEA1A1BE3902B0055BF7A /* Team Profile */,
 				FA59C7A91BE279AD00A71FDD /* Add New Team */,
+				FA60A8AE1BE5D965000054D9 /* Register */,
 				6B0502F41B8BD99500DA1F24 /* SignIn */,
 				6BE45F181B7A7D4F00344228 /* Main.storyboard */,
 				CED33FE41BB49B3D00B357CE /* Launch Screen.storyboard */,
@@ -505,6 +519,28 @@
 			name = "Add New Team";
 			sourceTree = "<group>";
 		};
+		FA60A8AE1BE5D965000054D9 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Register;
+			sourceTree = "<group>";
+		};
+		FA60A8AF1BE5DC98000054D9 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				FA60A8B01BE5DCA4000054D9 /* MBProgressHUD.h */,
+				FA60A8B11BE5DCA4000054D9 /* MBProgressHUD.m */,
+				FA60A8B21BE5DCA4000054D9 /* GradientTextView.h */,
+				FA60A8B31BE5DCA4000054D9 /* GradientTextView.m */,
+				FA60A8B41BE5DCA4000054D9 /* GradientView.h */,
+				FA60A8B51BE5DCA4000054D9 /* GradientView.m */,
+				FA60A8B61BE5DCA4000054D9 /* ApiHelper.h */,
+				FA60A8B71BE5DCA4000054D9 /* ApiHelper.m */,
+			);
+			name = Helper;
+			sourceTree = "<group>";
+		};
 		FA74D52D1BE4CD2300C59BAD /* Home Menu */ = {
 			isa = PBXGroup;
 			children = (
@@ -644,8 +680,11 @@
 				6BBC97B71BA358C300DC9B60 /* ColorThemeSettings.m in Sources */,
 				CED33FE31BB4900100B357CE /* AWSUserFileManager.m in Sources */,
 				FA1DEA1E1BE390650055BF7A /* TeamProfileCollectionViewController.m in Sources */,
+				FA60A8B91BE5DCA4000054D9 /* GradientTextView.m in Sources */,
 				6B443C921B5E002E00406B17 /* SignInViewController.m in Sources */,
+				FA60A8B81BE5DCA4000054D9 /* MBProgressHUD.m in Sources */,
 				6605EA8A1BD7E557005A5016 /* PushReceiver.m in Sources */,
+				FA60A8BA1BE5DCA4000054D9 /* GradientView.m in Sources */,
 				FA1DEA231BE392FD0055BF7A /* TeamMemberCellView.m in Sources */,
 				CEA68A821B87E8E200744C02 /* AWSPushManager.m in Sources */,
 				FA7EA25F1BE52F6800BFAFFE /* ChallengesViewController.m in Sources */,
@@ -659,6 +698,7 @@
 				6611045C1B8756F500C8F1F4 /* DemoFeature.m in Sources */,
 				FAB9AC4C1BE4A0870090FC1A /* ViewTeamTVC.m in Sources */,
 				FA7EA25C1BE52C0400BFAFFE /* OverlayView.m in Sources */,
+				FA60A8BB1BE5DCA4000054D9 /* ApiHelper.m in Sources */,
 				6B443C951B5E031B00406B17 /* MainViewController.m in Sources */,
 				661104591B87526700C8F1F4 /* UserIdentityViewController.m in Sources */,
 				FA74D5301BE4CD7100C59BAD /* HomeMenuViewController.m in Sources */,
