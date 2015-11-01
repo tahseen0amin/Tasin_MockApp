@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-#define Api_Base_Url @"http://taazuh.co.uk/Mdafs/index.php/"
+#define Api_Base_Url @"http://taazuh.co.uk/mock/index.php/"
 
 @interface ApiHelper : NSObject
 

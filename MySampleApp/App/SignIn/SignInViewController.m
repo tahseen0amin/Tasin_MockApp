@@ -131,8 +131,8 @@ static NSString *LOG_TAG;
     [self handleLoginWithSignInProvider:AWSSignInProviderTypeFacebook];
 }
 - (void)handleCustomLogin {
-    NSString *data = [NSString stringWithFormat:@"?email=%@&pass=%@",self.customUserIdField.text,self.customPasswordField.text];
-    NSString *url = [NSString stringWithFormat:@"%@",data];
+    NSString *data = [NSString stringWithFormat:@"%@/%@",self.customUserIdField.text,self.customPasswordField.text];
+    NSString *url = [NSString stringWithFormat:@"login/%@",data];
     [ApiHelper connectionWithUrl:url PostString:nil
                       HttpMethod:@"GET"
                          success:^(NSData *data, NSURLResponse *response) {
@@ -144,6 +144,13 @@ static NSString *LOG_TAG;
                                  
                                  // check for success key
                                  NSLog(@"%@", APIResponseDictionary);
+                                 NSString *teamID = [APIResponseDictionary objectForKey:@"MemberID"];
+                                 NSString *name = [APIResponseDictionary objectForKey:@"name"];
+                                 
+                                 NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+                                 [defaults setObject:teamID  forKey:@"MemberID"];
+                                 [defaults setObject:name  forKey:@"MemberName"];
+                                  [defaults synchronize];
                                  //
                                  [self.parentViewController dismissViewControllerAnimated:YES
                                                                                completion:nil];

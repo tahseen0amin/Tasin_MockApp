@@ -26,8 +26,9 @@
 }
 - (IBAction)signUpClicked:(id)sender {
     if ([self checkForEmpty:self.fullNameTF] && [self checkForEmpty:self.emailTF] && [self checkForEmpty:self.passwordTF]) {
-        NSString *data = [NSString stringWithFormat:@"name=%@&email=%@&pass=%@",self.fullNameTF.text,self.emailTF.text,self.passwordTF.text];
-        NSString *url = [NSString stringWithFormat:@"%@",data];
+        NSString *data = [NSString stringWithFormat:@"%@/%@/%@",self.fullNameTF.text,self.emailTF.text,self.passwordTF.text];
+        NSString *url = [NSString stringWithFormat:@"register/%@",data];
+        url = [url stringByReplacingOccurrencesOfString:@" " withString:@"%20"];
         [ApiHelper connectionWithUrl:url PostString:nil
                           HttpMethod:@"GET"
                              success:^(NSData *data, NSURLResponse *response) {
@@ -39,8 +40,16 @@
                                      
                                      // check for success key
                                      NSLog(@"%@", APIResponseDictionary);
+                                     NSString *teamID = [APIResponseDictionary objectForKey:@"lastID"];
+                                     
+                                     
                                      //
-                                     [self.parentViewController dismissViewControllerAnimated:YES
+                                     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+                                     [defaults setObject:teamID  forKey:@"MemberID"];
+                                     [defaults setObject:self.fullNameTF.text  forKey:@"MemberName"];
+                                     [defaults setObject:[NSNumber numberWithBool:YES] forKey:@"registered"];
+                                     [defaults synchronize];
+                                     [self.presentingViewController dismissViewControllerAnimated:YES
                                                                                    completion:nil];
                                  }
                              }
@@ -53,9 +62,7 @@
 }
 
 - (IBAction)cancelClicked:(id)sender {
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    [defaults setObject:[NSNumber numberWithBool:YES] forKey:@"registered"];
-     [defaults synchronize];
+   
     [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
 }
 

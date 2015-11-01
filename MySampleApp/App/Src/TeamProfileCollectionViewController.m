@@ -16,6 +16,8 @@
 
 @interface TeamProfileCollectionViewController ()<ABPeoplePickerNavigationControllerDelegate, MFMessageComposeViewControllerDelegate, MFMailComposeViewControllerDelegate>
 
+@property (nonatomic, strong) NSArray *membersArray;
+
 @end
 
 @implementation TeamProfileCollectionViewController
@@ -42,6 +44,7 @@ static NSString * const reuseIdentifierForHeader = @"HeaderCell";
     
     UIBarButtonItem *home = [[UIBarButtonItem alloc]initWithTitle:@"Home" style:UIBarButtonItemStylePlain target:self action:@selector(homeButtonClicked)];
     self.navigationItem.leftBarButtonItem = home;
+    self.membersArray = [[NSArray alloc] initWithObjects:[UIImage imageNamed:@"tasin"],[UIImage imageNamed:@"child"],[UIImage imageNamed:@"tasin"], nil];
 }
 
 - (void)homeButtonClicked{
@@ -78,13 +81,14 @@ static NSString * const reuseIdentifierForHeader = @"HeaderCell";
 #pragma mark <UICollectionViewDataSource>
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return 3;
+    return self.membersArray.count;
 }
 
 - (TeamMemberCellView *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     TeamMemberCellView *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     
     // Configure the cell
+    cell.memberProfilePic.image = [self.membersArray objectAtIndex:indexPath.item];
     
     return cell;
 }
@@ -142,7 +146,7 @@ static NSString * const reuseIdentifierForHeader = @"HeaderCell";
     
     MFMessageComposeViewController *controller = [[MFMessageComposeViewController alloc] init];
     if([MFMessageComposeViewController canSendText]){
-        controller.body = @"SMS message here";
+        controller.body = @"HERE IS THE LINK TO DOWNLOAD THE APP AND JOIN OUT TEAM";
         controller.recipients = [NSArray arrayWithObjects:number, nil];
         controller.messageComposeDelegate = self;
         [self presentViewController:controller animated:YES completion:nil];
@@ -154,9 +158,9 @@ static NSString * const reuseIdentifierForHeader = @"HeaderCell";
         MFMailComposeViewController *mailCont = [[MFMailComposeViewController alloc] init];
         mailCont.mailComposeDelegate = self;
         
-        [mailCont setSubject:@"yo!"];
+        [mailCont setSubject:@"Download Social Evening"];
         [mailCont setToRecipients:[NSArray arrayWithObject:address]];
-        [mailCont setMessageBody:@"Don't ever want to give you up" isHTML:NO];
+        [mailCont setMessageBody: @"HERE IS THE LINK TO DOWNLOAD THE APP AND JOIN OUT TEAM" isHTML:NO];
         
         [self presentViewController:mailCont animated:YES completion:nil];
     }

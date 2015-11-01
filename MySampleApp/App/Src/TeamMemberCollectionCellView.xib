@@ -14,7 +14,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CustomEvent" translatesAutoresizingMaskIntoConstraints="NO" id="5H0-iH-pnA">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="child" translatesAutoresizingMaskIntoConstraints="NO" id="5H0-iH-pnA">
                         <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                         <animations/>
                     </imageView>
@@ -33,10 +33,10 @@
             <connections>
                 <outlet property="memberProfilePic" destination="5H0-iH-pnA" id="uMI-nk-uCh"/>
             </connections>
-            <point key="canvasLocation" x="175" y="290"/>
+            <point key="canvasLocation" x="65" y="109"/>
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="CustomEvent" width="150" height="150"/>
+        <image name="child" width="100" height="103"/>
     </resources>
 </document>

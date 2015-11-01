@@ -8,6 +8,7 @@
 
 #import "AddTeamViewController.h"
 #import "TeamProfileCollectionViewController.h"
+#import "ApiHelper.h"
 
 @interface AddTeamViewController (){
     BOOL imageTaken, nameChoosen;
@@ -55,9 +56,6 @@
 }
 
 - (IBAction)TakeSelfie:(id)sender {
-    TeamProfileCollectionViewController *nextCo = [[TeamProfileCollectionViewController alloc] initWithNibName:@"TeamProfileCollectionViewController" bundle:nil];
-    UINavigationController *cont = [[UINavigationController alloc] initWithRootViewController:nextCo];
-    [self presentViewController:cont animated:YES completion:nil];
     
     UIImagePickerController *picker = [[UIImagePickerController alloc] init];
     if (![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
@@ -73,9 +71,6 @@
         [self presentViewController:alertController
                            animated:YES
                          completion:^{
-                             imageTaken = YES;
-                             self.TeamNameTF.hidden = NO;
-                             [self.TeamNameTF becomeFirstResponder];
                          }];
     } else {
         picker.delegate = self;
@@ -101,14 +96,64 @@
     [self.TeamNameTF becomeFirstResponder];
 }
 
+- (void)addTeamToServer {
+    NSString *data = [NSString stringWithFormat:@"%@/%@",self.teamName, [[NSUserDefaults standardUserDefaults] objectForKey:@"MemberID"] ];
+    NSString *url = [NSString stringWithFormat:@"registerTeam/%@",data];
+    url = [url stringByReplacingOccurrencesOfString:@" " withString:@"%20"];
+    [ApiHelper connectionWithUrl:url PostString:nil
+                      HttpMethod:@"GET"
+                         success:^(NSData *data, NSURLResponse *response) {
+                             NSError *error;
+                             NSDictionary *APIResponseDictionary = data ? [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers | NSJSONReadingMutableLeaves error:&error]:nil;
+                             if(error){
+                                 [self showErrorDialog:nil withMessage:@"wrong response"];
+                             } else {
+                                 
+                                 // check for success key
+                                 NSLog(@"%@", APIResponseDictionary);
+                                 NSString *teamID = [APIResponseDictionary objectForKey:@"lastID"];
+                                 
+                                 
+                                 //
+                                 NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+                                 [defaults setObject:teamID  forKey:@"TeamID"];
+                                 [defaults setObject:self.teamName  forKey:@"TeamName"];
+                                 [defaults setObject:[NSNumber numberWithBool:YES] forKey:@"registered"];
+                                 [defaults synchronize];
+                                 [self.presentingViewController dismissViewControllerAnimated:YES
+                                                                                   completion:nil];
+                             }
+                         }
+                         failure:^(NSData *data, NSError *connectionError) {
+                             [self showErrorDialog:@"Error" withMessage:@"couldn't connect"];
+                         }];
+}
+
 - (void)segueToAnotherController {
     if ([self nextButtonEnabled]) {
+        
+        [self addTeamToServer];
         // segue to different controller
          TeamProfileCollectionViewController *nextCo = [[TeamProfileCollectionViewController alloc] initWithNibName:@"TeamProfileCollectionViewController" bundle:nil];
         UINavigationController *cont = [[UINavigationController alloc] initWithRootViewController:nextCo];
         [self presentViewController:cont animated:YES completion:nil];
         
     }
+}
+
+- (void)showErrorDialog:(NSString *)title withMessage:(NSString *)message {
+    
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:NSLocalizedString(title, @"Sign-in error for sign-in failure.")
+                                                                             message:NSLocalizedString(message, @"Sign-in message structure for sign-in failure.")
+                                                                      preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *doneAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"Cancel", @"Label to cancel sign-in failure.")
+                                                         style:UIAlertActionStyleCancel
+                                                       handler:nil];
+    [alertController addAction:doneAction];
+    
+    [self presentViewController:alertController
+                       animated:YES
+                     completion:nil];
 }
 
 @end
