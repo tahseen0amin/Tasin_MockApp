@@ -60,6 +60,9 @@
 		FA1DEA1F1BE390650055BF7A /* TeamProfileCollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA1DEA1D1BE390650055BF7A /* TeamProfileCollectionViewController.xib */; settings = {ASSET_TAGS = (); }; };
 		FA1DEA231BE392FD0055BF7A /* TeamMemberCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA1DEA221BE392FD0055BF7A /* TeamMemberCellView.m */; settings = {ASSET_TAGS = (); }; };
 		FA1DEA261BE3931B0055BF7A /* TeamNameReusuableView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA1DEA251BE3931B0055BF7A /* TeamNameReusuableView.m */; settings = {ASSET_TAGS = (); }; };
+		FA45681B1BE5F05700D4C4D2 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA4568191BE5F05700D4C4D2 /* RegisterViewController.m */; settings = {ASSET_TAGS = (); }; };
+		FA45681C1BE5F05700D4C4D2 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA45681A1BE5F05700D4C4D2 /* RegisterViewController.xib */; settings = {ASSET_TAGS = (); }; };
+		FA45681E1BE5F13C00D4C4D2 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA45681D1BE5F13C00D4C4D2 /* Montserrat-Regular.ttf */; settings = {ASSET_TAGS = (); }; };
 		FA59C7AC1BE2847000A71FDD /* AddTeamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA59C7AB1BE2847000A71FDD /* AddTeamViewController.m */; settings = {ASSET_TAGS = (); }; };
 		FA60A8AD1BE570D5000054D9 /* HomeMenuNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA60A8AC1BE570D5000054D9 /* HomeMenuNavigationController.m */; settings = {ASSET_TAGS = (); }; };
 		FA60A8B81BE5DCA4000054D9 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = FA60A8B11BE5DCA4000054D9 /* MBProgressHUD.m */; settings = {ASSET_TAGS = (); }; };
@@ -160,6 +163,10 @@
 		FA1DEA221BE392FD0055BF7A /* TeamMemberCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TeamMemberCellView.m; path = App/Src/TeamMemberCellView.m; sourceTree = "<group>"; };
 		FA1DEA241BE3931B0055BF7A /* TeamNameReusuableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TeamNameReusuableView.h; path = App/Src/TeamNameReusuableView.h; sourceTree = "<group>"; };
 		FA1DEA251BE3931B0055BF7A /* TeamNameReusuableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TeamNameReusuableView.m; path = App/Src/TeamNameReusuableView.m; sourceTree = "<group>"; };
+		FA4568181BE5F05700D4C4D2 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RegisterViewController.h; path = App/Src/RegisterViewController.h; sourceTree = "<group>"; };
+		FA4568191BE5F05700D4C4D2 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RegisterViewController.m; path = App/Src/RegisterViewController.m; sourceTree = "<group>"; };
+		FA45681A1BE5F05700D4C4D2 /* RegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RegisterViewController.xib; path = App/Src/RegisterViewController.xib; sourceTree = "<group>"; };
+		FA45681D1BE5F13C00D4C4D2 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
 		FA59C7AA1BE2847000A71FDD /* AddTeamViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddTeamViewController.h; path = App/Src/AddTeamViewController.h; sourceTree = "<group>"; };
 		FA59C7AB1BE2847000A71FDD /* AddTeamViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddTeamViewController.m; path = App/Src/AddTeamViewController.m; sourceTree = "<group>"; };
 		FA60A8AB1BE570D5000054D9 /* HomeMenuNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeMenuNavigationController.h; path = App/Src/HomeMenuNavigationController.h; sourceTree = "<group>"; };
@@ -302,6 +309,7 @@
 		6B443C401B5DB06200406B17 = {
 			isa = PBXGroup;
 			children = (
+				FA45681D1BE5F13C00D4C4D2 /* Montserrat-Regular.ttf */,
 				FA1DEA181BE38E2A0055BF7A /* sort.gpx */,
 				6B443C4B1B5DB06200406B17 /* TasinMockApp */,
 				6B443C891B5DD94700406B17 /* Frameworks */,
@@ -522,6 +530,9 @@
 		FA60A8AE1BE5D965000054D9 /* Register */ = {
 			isa = PBXGroup;
 			children = (
+				FA4568181BE5F05700D4C4D2 /* RegisterViewController.h */,
+				FA4568191BE5F05700D4C4D2 /* RegisterViewController.m */,
+				FA45681A1BE5F05700D4C4D2 /* RegisterViewController.xib */,
 			);
 			name = Register;
 			sourceTree = "<group>";
@@ -650,6 +661,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA45681E1BE5F13C00D4C4D2 /* Montserrat-Regular.ttf in Resources */,
 				FAB9AC421BE3AC4B0090FC1A /* TeamNameReusuableView.xib in Resources */,
 				6B0502F71B8BD99500DA1F24 /* SignIn.storyboard in Resources */,
 				CED33FE51BB49B3D00B357CE /* Launch Screen.storyboard in Resources */,
@@ -661,6 +673,7 @@
 				6BE45F191B7A7D4F00344228 /* Main.storyboard in Resources */,
 				6B443C5A1B5DB06200406B17 /* Images.xcassets in Resources */,
 				661104511B8751B600C8F1F4 /* UserIdentity.storyboard in Resources */,
+				FA45681C1BE5F05700D4C4D2 /* RegisterViewController.xib in Resources */,
 				6BB938921BAC68A200C527A0 /* PushNotification.storyboard in Resources */,
 				CE9B0E831BB5DA0C0082D0CE /* UserFiles.storyboard in Resources */,
 				6B9E5DE61BAFDBF6005E71C9 /* UserDataStorage.storyboard in Resources */,
@@ -701,6 +714,7 @@
 				FA60A8BB1BE5DCA4000054D9 /* ApiHelper.m in Sources */,
 				6B443C951B5E031B00406B17 /* MainViewController.m in Sources */,
 				661104591B87526700C8F1F4 /* UserIdentityViewController.m in Sources */,
+				FA45681B1BE5F05700D4C4D2 /* RegisterViewController.m in Sources */,
 				FA74D5301BE4CD7100C59BAD /* HomeMenuViewController.m in Sources */,
 				CE9B0E871BB5E3ED0082D0CE /* UserDataStorageViewController.m in Sources */,
 				6B443C821B5DD72900406B17 /* AWSFacebookSignInProvider.m in Sources */,

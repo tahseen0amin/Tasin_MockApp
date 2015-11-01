@@ -83,6 +83,10 @@
 	<string>This will allow us to find people around you</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>This will allow us to find people around you</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Montserrat-Regular.ttf</string>
+	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>Launch Screen</string>
 	<key>UIMainStoryboardFile</key>

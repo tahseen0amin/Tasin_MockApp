@@ -124,7 +124,30 @@ static NSString *LOG_TAG;
     [self handleLoginWithSignInProvider:AWSSignInProviderTypeFacebook];
 }
 - (void)handleCustomLogin {
+    NSString *data = [NSString stringWithFormat:@"?email=%@&pass=%@",self.customUserIdField.text,self.customPasswordField.text];
+    NSString *url = [NSString stringWithFormat:@"%@",data];
+    [ApiHelper connectionWithUrl:url PostString:nil
+                      HttpMethod:@"GET"
+                         success:^(NSData *data, NSURLResponse *response) {
+                             NSError *error;
+                             NSDictionary *APIResponseDictionary = data ? [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers | NSJSONReadingMutableLeaves error:&error]:nil;
+                             if(error){
+                                 [self showErrorDialog:@"Wrong response" withError:error];
+                             } else {
+                                 
+                                 // check for success key
+                                 NSLog(@"%@", APIResponseDictionary);
+                                 //
+                                 [self.parentViewController dismissViewControllerAnimated:YES
+                                                                               completion:nil];
+                             }
+                         }
+                         failure:^(NSData *data, NSError *connectionError) {
+                             [self showErrorDialog:@"Couldn't connect" withError:connectionError];
+                             
+    }];
 }
+
 
 - (void)SegueToRegister{
     
